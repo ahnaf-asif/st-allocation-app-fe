@@ -1,5 +1,5 @@
 import { Layout } from '@/Layouts';
-import { Box, Button, Divider, Text, Title } from '@mantine/core';
+import { Box, Button, Divider, NumberInput, Text, Title } from '@mantine/core';
 import { CURRENT_SEMESTER } from '@/Config';
 import { notifications } from '@mantine/notifications';
 import { axios } from '@/Config';
@@ -9,15 +9,24 @@ import { isNotEmpty, useForm } from '@mantine/form';
 import { StyledBorderedBox } from '@/Shared/Components/BoxStyles';
 import { StyledDateTimePicker } from '@/Shared/Components/FormStyles/FormStyles';
 import { IconEdit } from '@tabler/icons-react';
+import { PeriodsConfig } from './PeriodsConfig';
 
 export const AdminConfiguration = () => {
-  const [updateRoutineDeadline, setUpdateRoutineDeadline] = useState<Date>(new Date());
+  const [config, setConfig] = useState({
+    updateRoutineDeadline: new Date(),
+    totalPeriodsPerWeek: 6,
+    maxPeriodsPerDay: 3
+  });
   const auth = useAppSelector((state) => state.auth);
 
   const getConfiguration = async () => {
     try {
       const { data } = await axios.get('/user/configuration');
-      setUpdateRoutineDeadline(data.updateRoutineDeadline);
+      setConfig({
+        maxPeriodsPerDay: data.maxPeriodsPerDay,
+        totalPeriodsPerWeek: data.totalPeriodsPerWeek,
+        updateRoutineDeadline: new Date(data.updateRoutineDeadline)
+      });
     } catch (e) {
       notifications.show({
         title: 'Error!!!',
@@ -33,26 +42,38 @@ export const AdminConfiguration = () => {
     }
   }, [auth]);
 
-  const updateRoutineForm = useForm({
+  const configForm = useForm({
     initialValues: {
-      updateRoutineDeadline: new Date()
+      updateRoutineDeadline: new Date(),
+      totalPeriodsPerWeek: 6,
+      maxPeriodsPerDay: 3
     },
 
     validate: {
-      updateRoutineDeadline: (date: Date) => null
+      updateRoutineDeadline: isNotEmpty('enter a valid date'),
+      totalPeriodsPerWeek: (periods: number) =>
+        periods > 0 ? null : 'total periods per week must be at least 1',
+      maxPeriodsPerDay: (periods: number) =>
+        periods > 0 ? null : 'maximum periods per day must be at least 1'
     }
   });
 
   useEffect(() => {
-    if (updateRoutineDeadline !== null) {
-      updateRoutineForm.setFieldValue('updateRoutineDeadline', new Date(updateRoutineDeadline));
-    }
-  }, [updateRoutineDeadline]);
+    configForm.setValues({
+      maxPeriodsPerDay: config.maxPeriodsPerDay,
+      totalPeriodsPerWeek: config.totalPeriodsPerWeek,
+      updateRoutineDeadline: new Date(config.updateRoutineDeadline)
+    });
+  }, [config]);
 
   const updateDeadline = async (values: any) => {
     try {
       const { data } = await axios.patch('/admin/configuration', values);
-      setUpdateRoutineDeadline(new Date(data.updateRoutineDeadline));
+      setConfig({
+        maxPeriodsPerDay: data.maxPeriodsPerDay,
+        totalPeriodsPerWeek: data.totalPeriodsPerWeek,
+        updateRoutineDeadline: new Date(data.updateRoutineDeadline)
+      });
 
       notifications.show({
         title: 'Success!!!',
@@ -60,6 +81,7 @@ export const AdminConfiguration = () => {
         color: 'green'
       });
     } catch (e) {
+      console.log(e);
       notifications.show({
         title: 'Error!!!',
         message: 'Unexpected error during deadline update',
@@ -78,18 +100,32 @@ export const AdminConfiguration = () => {
 
       <Box mt={40}>
         <StyledBorderedBox>
-          <form onSubmit={updateRoutineForm.onSubmit((values) => updateDeadline(values))}>
+          <form onSubmit={configForm.onSubmit((values) => updateDeadline(values))}>
             <StyledDateTimePicker
               valueFormat="DD MMM YYYY hh:mm A"
-              {...updateRoutineForm.getInputProps('updateRoutineDeadline')}
+              {...configForm.getInputProps('updateRoutineDeadline')}
               label="Deadline for ST routine update"
             />
-            <Button type="submit">
+            <NumberInput
+              {...configForm.getInputProps('totalPeriodsPerWeek')}
+              mt={10}
+              label="Number of Sessions per week"
+            />
+            <NumberInput
+              {...configForm.getInputProps('maxPeriodsPerDay')}
+              mt={10}
+              label="Number of Sessions per day"
+            />
+            <Button mt={20} type="submit">
               <IconEdit size={18} />
-              &nbsp; Update Deadline
+              &nbsp; Update Configuration
             </Button>
           </form>
         </StyledBorderedBox>
+
+        <Box mt={30}>
+          <PeriodsConfig />
+        </Box>
       </Box>
     </Layout>
   );
