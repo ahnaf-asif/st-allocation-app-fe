@@ -17,19 +17,16 @@ import { axios } from '@/Config';
 import { isNotEmpty, useForm } from '@mantine/form';
 import { TimeInput } from '@mantine/dates';
 import { useAppSelector } from '@/Redux/hooks';
-import { IconClock } from '@tabler/icons-react';
-import { convertTo12HourFormat } from '@/Pages/AdminPages/Configuration/Helpers';
+import { convertTo12HourFormat, convertTo24HourFormat } from './Helpers';
 
 export const PeriodsConfig = () => {
   const auth = useAppSelector((state) => state.auth);
   const [periods, setPeriods] = useState([]);
-  const [periodToBeUpdated, setPeriodToBeUpdated] = useState(null);
-  const [periodToBeDeleted, setPeriodToBeDeleted] = useState(null);
+  const [periodToBeUpdated, setPeriodToBeUpdated] = useState<any>(null);
+  const [periodToBeDeleted, setPeriodToBeDeleted] = useState<any>(null);
 
   const [periodUpdateModal, setPeriodUpdateModal] = useState(false);
   const [periodDeleteModal, setPeriodDeleteModal] = useState(false);
-
-  const timeInputPattern = /^\b(0[1-9]|1[0-2]):[0-5][0-9]\s(?:AM|PM)\b$/;
 
   const getSchedules = async () => {
     try {
@@ -52,6 +49,12 @@ export const PeriodsConfig = () => {
 
   const updatePeriodClicked = (period: any) => {
     setPeriodToBeUpdated(period);
+
+    updatePeriodForm.setValues({
+      from: convertTo24HourFormat(period.from),
+      to: convertTo24HourFormat(period.to)
+    });
+
     setPeriodUpdateModal(true);
   };
 
@@ -71,17 +74,27 @@ export const PeriodsConfig = () => {
     }
   });
 
+  const updatePeriodForm = useForm({
+    initialValues: {
+      from: '',
+      to: ''
+    },
+    validate: {
+      from: isNotEmpty('Enter a valid time'),
+      to: isNotEmpty('Enter a valid time')
+    }
+  });
+
   const addPeriod = async (values: { from: string; to: string }) => {
     const from = convertTo12HourFormat(values.from);
     const to = convertTo12HourFormat(values.to);
 
     try {
-      console.log('fuck ', from, to);
-
       const resp = await axios.post('/admin/schedules/add', { from, to });
 
       if (resp) {
         await getSchedules();
+        addPeriodForm.reset();
 
         notifications.show({
           title: 'Success!!!',
@@ -90,15 +103,66 @@ export const PeriodsConfig = () => {
         });
       }
     } catch (e) {
-      console.log(e);
       notifications.show({
         title: 'Error!!!',
-        message: 'Cannot add stuff bruh fuckup',
+        message: 'Cannot add the period',
         color: 'red'
       });
     }
+  };
 
-    console.log({ from, to });
+  const updatePeriod = async (values: { from: string; to: string }) => {
+    const from = convertTo12HourFormat(values.from);
+    const to = convertTo12HourFormat(values.to);
+
+    try {
+      const resp = await axios.patch(`/admin/schedules/update/${periodToBeUpdated?.id}`, {
+        from,
+        to
+      });
+
+      if (resp) {
+        await getSchedules();
+
+        notifications.show({
+          title: 'Success!!!',
+          message: 'Successfully updated a schedule',
+          color: 'green'
+        });
+
+        setPeriodUpdateModal(false);
+      }
+    } catch (e) {
+      notifications.show({
+        title: 'Error!!!',
+        message: 'Cannot update the period',
+        color: 'red'
+      });
+    }
+  };
+
+  const deleteSchedule = async () => {
+    try {
+      const resp = await axios.delete(`/admin/schedules/delete/${periodToBeDeleted?.id}`);
+
+      if (resp) {
+        await getSchedules();
+
+        notifications.show({
+          title: 'Success!!!',
+          message: 'Successfully deleted the schedule',
+          color: 'green'
+        });
+
+        setPeriodDeleteModal(false);
+      }
+    } catch (e) {
+      notifications.show({
+        title: 'Error!!!',
+        message: 'Cannot delete the period',
+        color: 'red'
+      });
+    }
   };
 
   return (
@@ -112,11 +176,9 @@ export const PeriodsConfig = () => {
         <form onSubmit={addPeriodForm.onSubmit((values) => addPeriod(values))}>
           <Grid align="flex-end">
             <Grid.Col sm={5} span={12}>
-              {/*<TextInput {...addPeriodForm.getInputProps('from')} label="From" />*/}
               <TimeInput {...addPeriodForm.getInputProps('from')} label="From" />
             </Grid.Col>
             <Grid.Col sm={5} span={12}>
-              {/*<TextInput {...addPeriodForm.getInputProps('to')} label="To" />*/}
               <TimeInput {...addPeriodForm.getInputProps('to')} label="To" />
             </Grid.Col>
             <Grid.Col sm={2} span={12}>
@@ -161,11 +223,17 @@ export const PeriodsConfig = () => {
         opened={periodUpdateModal}
         onClose={() => setPeriodUpdateModal(false)}
       >
-        update period modal
-        <Flex mt={20} justify="flex-end" gap={10}>
-          <Button onClick={() => setPeriodUpdateModal(false)}>Cancel</Button>
-          <Button color="green">Update</Button>
-        </Flex>
+        <form onSubmit={updatePeriodForm.onSubmit((values) => updatePeriod(values))}>
+          <TimeInput {...updatePeriodForm.getInputProps('from')} label="From" />
+          <TimeInput {...updatePeriodForm.getInputProps('to')} mt={10} label="To" />
+
+          <Flex mt={20} justify="flex-end" gap={10}>
+            <Button onClick={() => setPeriodUpdateModal(false)}>Cancel</Button>
+            <Button type="submit" color="green">
+              Update
+            </Button>
+          </Flex>
+        </form>
       </Modal>
 
       <Modal
@@ -174,10 +242,15 @@ export const PeriodsConfig = () => {
         opened={periodDeleteModal}
         onClose={() => setPeriodDeleteModal(false)}
       >
-        delete period modal
+        <Title order={4}>Do you want to delete the following period?</Title>
+        <Text my={10}>
+          {periodToBeDeleted?.from} - {periodToBeDeleted?.to}
+        </Text>
         <Flex mt={20} justify="flex-end" gap={10}>
           <Button onClick={() => setPeriodDeleteModal(false)}>Cancel</Button>
-          <Button color="red">Delete</Button>
+          <Button onClick={deleteSchedule} color="red">
+            Delete
+          </Button>
         </Flex>
       </Modal>
     </StyledBorderedBox>

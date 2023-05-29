@@ -58,6 +58,11 @@ export const adminSidebarMenu = [
     title: 'Routine',
     link: '/admin/routine',
     icon: <IconCalendar size={20} stroke={1.5} style={{ marginBottom: '-4px' }} />
+  },
+  {
+    title: 'Account Settings',
+    link: '/admin/account-settings',
+    icon: <IconSettings size={20} stroke={1.5} style={{ marginBottom: '-4px' }} />
   }
 ];
 

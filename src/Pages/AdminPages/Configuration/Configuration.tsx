@@ -114,7 +114,7 @@ export const AdminConfiguration = () => {
             <NumberInput
               {...configForm.getInputProps('maxPeriodsPerDay')}
               mt={10}
-              label="Number of Sessions per day"
+              label="Maximum number of Sessions per day"
             />
             <Button mt={20} type="submit">
               <IconEdit size={18} />

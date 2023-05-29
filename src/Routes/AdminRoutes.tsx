@@ -1,5 +1,6 @@
 import { RouteType } from './Types';
 import {
+  AccountSettings,
   AdminConfiguration,
   AdminDashboard,
   AdminRoutine,
@@ -27,5 +28,9 @@ export const AdminRoutes: RouteType[] = [
   {
     path: '/admin/routine',
     element: <AdminRoutine />
+  },
+  {
+    path: '/admin/account-settings',
+    element: <AccountSettings />
   }
 ];
