@@ -15,7 +15,8 @@ export const AdminConfiguration = () => {
   const [config, setConfig] = useState({
     updateRoutineDeadline: new Date(),
     totalPeriodsPerWeek: 6,
-    maxPeriodsPerDay: 3
+    maxPeriodsPerDay: 3,
+    minDaysPerWeek: 3
   });
   const auth = useAppSelector((state) => state.auth);
 
@@ -25,6 +26,7 @@ export const AdminConfiguration = () => {
       setConfig({
         maxPeriodsPerDay: data.maxPeriodsPerDay,
         totalPeriodsPerWeek: data.totalPeriodsPerWeek,
+        minDaysPerWeek: data.minDaysPerWeek,
         updateRoutineDeadline: new Date(data.updateRoutineDeadline)
       });
     } catch (e) {
@@ -46,7 +48,8 @@ export const AdminConfiguration = () => {
     initialValues: {
       updateRoutineDeadline: new Date(),
       totalPeriodsPerWeek: 6,
-      maxPeriodsPerDay: 3
+      maxPeriodsPerDay: 3,
+      minDaysPerWeek: 3
     },
 
     validate: {
@@ -54,7 +57,9 @@ export const AdminConfiguration = () => {
       totalPeriodsPerWeek: (periods: number) =>
         periods > 0 ? null : 'total periods per week must be at least 1',
       maxPeriodsPerDay: (periods: number) =>
-        periods > 0 ? null : 'maximum periods per day must be at least 1'
+        periods > 0 ? null : 'maximum periods per day must be at least 1',
+      minDaysPerWeek: (periods: number) =>
+        periods > 0 ? null : 'minimum days per week must be at least 1'
     }
   });
 
@@ -62,6 +67,7 @@ export const AdminConfiguration = () => {
     configForm.setValues({
       maxPeriodsPerDay: config.maxPeriodsPerDay,
       totalPeriodsPerWeek: config.totalPeriodsPerWeek,
+      minDaysPerWeek: config.minDaysPerWeek,
       updateRoutineDeadline: new Date(config.updateRoutineDeadline)
     });
   }, [config]);
@@ -72,7 +78,8 @@ export const AdminConfiguration = () => {
       setConfig({
         maxPeriodsPerDay: data.maxPeriodsPerDay,
         totalPeriodsPerWeek: data.totalPeriodsPerWeek,
-        updateRoutineDeadline: new Date(data.updateRoutineDeadline)
+        updateRoutineDeadline: new Date(data.updateRoutineDeadline),
+        minDaysPerWeek: data.minDaysPerWeek
       });
 
       notifications.show({
@@ -115,6 +122,11 @@ export const AdminConfiguration = () => {
               {...configForm.getInputProps('maxPeriodsPerDay')}
               mt={10}
               label="Maximum number of Sessions per day"
+            />
+            <NumberInput
+              {...configForm.getInputProps('minDaysPerWeek')}
+              mt={10}
+              label="Minimum number of days per week"
             />
             <Button mt={20} type="submit">
               <IconEdit size={18} />

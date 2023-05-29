@@ -17,6 +17,7 @@ export const StPeriods = () => {
   const [showRoomAvailability, setShowRoomAvailability] = useState(false);
   const [days, setDays] = useState([]);
   const [updateRoutineDeadline, setUpdateRoutineDeadline] = useState<Date>(new Date());
+  const [config, setConfig] = useState<any>({});
 
   const [periods, setPeriods] = useState([]);
 
@@ -26,6 +27,7 @@ export const StPeriods = () => {
     try {
       const { data } = await axios.get('/user/configuration');
       setUpdateRoutineDeadline(new Date(data.updateRoutineDeadline));
+      setConfig(data);
     } catch (e) {
       notifications.show({
         title: 'Error!!!',
@@ -209,8 +211,9 @@ export const StPeriods = () => {
         {updateRoutineDeadline > new Date() ? (
           <Box>
             <Text color="dimmed" size="sm" mb={20}>
-              You have to book 6 periods in total. You can have at most 3 periods in a day. However,
-              you have to select at least 3 different days of the week.
+              You have to book {config.totalPeriodsPerWeek} periods in total(in the whole week). You
+              can have at most {config.maxPeriodsPerDay} periods in a day. However, you have to
+              select at least {config.minDaysPerWeek} different days of the week.
             </Text>
             <Grid align="center">
               <Grid.Col xl={12} span={12}>
