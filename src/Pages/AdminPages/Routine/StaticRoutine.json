@@ -1,0 +1,2001 @@
+[
+  {
+    "schedule": "08:00 AM - 09:20 AM",
+    "scheduleId": 1,
+    "Saturday": [
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 8,
+        "stDetails": [
+          {
+            "id": 26,
+            "name": "Farhan Tanvir Efty",
+            "email": "farhan.tanvir.efty@g.bracu.ac.bd",
+            "student_id": "19301014",
+            "course": "MAT091 (4), MAT092 (5,6,8)",
+            "section": 4
+          },
+          {
+            "id": 33,
+            "name": "Shahadat Ahmed",
+            "email": "shahadat.ahmed@g.bracu.ac.bd",
+            "student_id": "20301481",
+            "course": "MAT110 (5,6,11,12)",
+            "section": 4
+          },
+          {
+            "id": 24,
+            "name": "Taslima Islam",
+            "email": "taslima.islam@g.bracu.ac.bd",
+            "student_id": "20101603",
+            "course": "MAT215 (4,9,12,13)",
+            "section": 4
+          },
+          {
+            "id": 23,
+            "name": "Sudipta Nandi Sarna",
+            "email": "sudipta.nandi.sarna@g.bracu.ac.bd",
+            "student_id": "20101257",
+            "course": "MAT215 (2,3,5,6)",
+            "section": 4
+          },
+          {
+            "id": 8,
+            "name": "Md. Shahanur Zilane",
+            "email": "md.shahanur.zilane@g.bracu.ac.bd",
+            "student_id": "20301225",
+            "course": "PHY111(1,17,22,33)",
+            "section": 4
+          },
+          {
+            "id": 42,
+            "name": "Shahrin Rahman",
+            "email": "shahrin.rahman@g.bracu.ac.bd",
+            "student_id": "20101464",
+            "course": "MAT120 (13,14,22,23)",
+            "section": 4
+          },
+          {
+            "id": 40,
+            "name": "Alpona Azrin",
+            "email": "alpona.azrin@g.bracu.ac.bd",
+            "student_id": "21101135",
+            "course": "MAT110 (21,22,27,28)",
+            "section": 4
+          },
+          {
+            "id": 37,
+            "name": "Salsabil Tanjim",
+            "email": "salsabil.tanjim@g.bracu.ac.bd",
+            "student_id": "20301354",
+            "course": "MAT110 (17,18,19,24)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 35,
+            "name": "S M ISHTIAK MAHMUD",
+            "email": "sm.ishtiak.mahmud@g.bracu.ac.bd",
+            "student_id": "20301071",
+            "course": "MAT216 (2,3,6,7)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Sunday": [
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 39,
+            "name": "Istiaq Ahmad",
+            "email": "istiaq.ahmad1@g.bracu.ac.bd",
+            "student_id": "20301056",
+            "course": "MAT216 (14,15,16,18)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Monday": [
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 34,
+            "name": "Tasfia Tarannum",
+            "email": "tasfia.tarannum@g.bracu.ac.bd",
+            "student_id": "20101237",
+            "course": "MAT110 (9,10,15,20)",
+            "section": 4
+          },
+          {
+            "id": 14,
+            "name": "Kazi Al Refat Pranta ",
+            "email": "kazi.al.refat.pranta@g.bracu.ac.bd",
+            "student_id": "20101444",
+            "course": "PHY111 (3,5,10,12)",
+            "section": 4
+          },
+          {
+            "id": 41,
+            "name": "Maliha Binta Islam",
+            "email": "maliha.binta.islam@g.bracu.ac.bd",
+            "student_id": "20101587",
+            "course": "MAT215 (7,8,10,11)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Tuesday": [],
+    "Wednesday": [
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 40,
+            "name": "Alpona Azrin",
+            "email": "alpona.azrin@g.bracu.ac.bd",
+            "student_id": "21101135",
+            "course": "MAT110 (21,22,27,28)",
+            "section": 4
+          },
+          {
+            "id": 41,
+            "name": "Maliha Binta Islam",
+            "email": "maliha.binta.islam@g.bracu.ac.bd",
+            "student_id": "20101587",
+            "course": "MAT215 (7,8,10,11)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Thursday": [
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 7,
+        "stDetails": [
+          {
+            "id": 26,
+            "name": "Farhan Tanvir Efty",
+            "email": "farhan.tanvir.efty@g.bracu.ac.bd",
+            "student_id": "19301014",
+            "course": "MAT091 (4), MAT092 (5,6,8)",
+            "section": 4
+          },
+          {
+            "id": 8,
+            "name": "Md. Shahanur Zilane",
+            "email": "md.shahanur.zilane@g.bracu.ac.bd",
+            "student_id": "20301225",
+            "course": "PHY111(1,17,22,33)",
+            "section": 4
+          },
+          {
+            "id": 32,
+            "name": "Enam Ahmed Taufik",
+            "email": "enam.ahmed.taufik@g.bracu.ac.bd",
+            "student_id": "20301398",
+            "course": "MAT110 (7,8,23,29)",
+            "section": 4
+          },
+          {
+            "id": 42,
+            "name": "Shahrin Rahman",
+            "email": "shahrin.rahman@g.bracu.ac.bd",
+            "student_id": "20101464",
+            "course": "MAT120 (13,14,22,23)",
+            "section": 4
+          },
+          {
+            "id": 37,
+            "name": "Salsabil Tanjim",
+            "email": "salsabil.tanjim@g.bracu.ac.bd",
+            "student_id": "20301354",
+            "course": "MAT110 (17,18,19,24)",
+            "section": 4
+          },
+          {
+            "id": 23,
+            "name": "Sudipta Nandi Sarna",
+            "email": "sudipta.nandi.sarna@g.bracu.ac.bd",
+            "student_id": "20101257",
+            "course": "MAT215 (2,3,5,6)",
+            "section": 4
+          },
+          {
+            "id": 35,
+            "name": "S M ISHTIAK MAHMUD",
+            "email": "sm.ishtiak.mahmud@g.bracu.ac.bd",
+            "student_id": "20301071",
+            "course": "MAT216 (2,3,6,7)",
+            "section": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "schedule": "09:30 AM - 10:50 AM",
+    "scheduleId": 2,
+    "Saturday": [
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 26,
+            "name": "Farhan Tanvir Efty",
+            "email": "farhan.tanvir.efty@g.bracu.ac.bd",
+            "student_id": "19301014",
+            "course": "MAT091 (4), MAT092 (5,6,8)",
+            "section": 4
+          },
+          {
+            "id": 33,
+            "name": "Shahadat Ahmed",
+            "email": "shahadat.ahmed@g.bracu.ac.bd",
+            "student_id": "20301481",
+            "course": "MAT110 (5,6,11,12)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Sunday": [
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 39,
+            "name": "Istiaq Ahmad",
+            "email": "istiaq.ahmad1@g.bracu.ac.bd",
+            "student_id": "20301056",
+            "course": "MAT216 (14,15,16,18)",
+            "section": 4
+          },
+          {
+            "id": 22,
+            "name": "MD.SHAWON MOLLAH",
+            "email": "md.shawon.mollah@g.bracu.ac.bd",
+            "student_id": "19201103",
+            "course": "MAT120 (20), MAT092 (1,2,9)",
+            "section": 4
+          },
+          {
+            "id": 23,
+            "name": "Sudipta Nandi Sarna",
+            "email": "sudipta.nandi.sarna@g.bracu.ac.bd",
+            "student_id": "20101257",
+            "course": "MAT215 (2,3,5,6)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Monday": [
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 6,
+        "stDetails": [
+          {
+            "id": 34,
+            "name": "Tasfia Tarannum",
+            "email": "tasfia.tarannum@g.bracu.ac.bd",
+            "student_id": "20101237",
+            "course": "MAT110 (9,10,15,20)",
+            "section": 4
+          },
+          {
+            "id": 18,
+            "name": "Nusrat Zaman Raya",
+            "email": "nusrat.zaman.raya@g.bracu.ac.bd",
+            "student_id": "20301110",
+            "course": "PHY111 (13,24,29)",
+            "section": 3
+          },
+          {
+            "id": 8,
+            "name": "Md. Shahanur Zilane",
+            "email": "md.shahanur.zilane@g.bracu.ac.bd",
+            "student_id": "20301225",
+            "course": "PHY111(1,17,22,33)",
+            "section": 4
+          },
+          {
+            "id": 31,
+            "name": "Farhan Ishraq Fagun",
+            "email": "farhan.ishraq.fagun@g.bracu.ac.bd",
+            "student_id": "20101295",
+            "course": "MAT120 (7,17,18,19)",
+            "section": 4
+          },
+          {
+            "id": 14,
+            "name": "Kazi Al Refat Pranta ",
+            "email": "kazi.al.refat.pranta@g.bracu.ac.bd",
+            "student_id": "20101444",
+            "course": "PHY111 (3,5,10,12)",
+            "section": 4
+          },
+          {
+            "id": 7,
+            "name": "Tasmim Afroj Lamia",
+            "email": "tasmim.afroj.lamia@g.bracu.ac.bd",
+            "student_id": "19301190",
+            "course": "PHY112(1,6,7,9)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 42,
+            "name": "Shahrin Rahman",
+            "email": "shahrin.rahman@g.bracu.ac.bd",
+            "student_id": "20101464",
+            "course": "MAT120 (13,14,22,23)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Tuesday": [
+      {
+        "dayId": 4,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 23,
+            "name": "Sudipta Nandi Sarna",
+            "email": "sudipta.nandi.sarna@g.bracu.ac.bd",
+            "student_id": "20101257",
+            "course": "MAT215 (2,3,5,6)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Wednesday": [
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 4,
+        "stDetails": [
+          {
+            "id": 24,
+            "name": "Taslima Islam",
+            "email": "taslima.islam@g.bracu.ac.bd",
+            "student_id": "20101603",
+            "course": "MAT215 (4,9,12,13)",
+            "section": 4
+          },
+          {
+            "id": 29,
+            "name": "Nafiz Siddiqui Adnan",
+            "email": "md.nafiz.siddiki@g.bracu.ac.bd",
+            "student_id": "20301016",
+            "course": "MAT120 (8,10,15,16)",
+            "section": 4
+          },
+          {
+            "id": 8,
+            "name": "Md. Shahanur Zilane",
+            "email": "md.shahanur.zilane@g.bracu.ac.bd",
+            "student_id": "20301225",
+            "course": "PHY111(1,17,22,33)",
+            "section": 4
+          },
+          {
+            "id": 18,
+            "name": "Nusrat Zaman Raya",
+            "email": "nusrat.zaman.raya@g.bracu.ac.bd",
+            "student_id": "20301110",
+            "course": "PHY111 (13,24,29)",
+            "section": 3
+          }
+        ]
+      }
+    ],
+    "Thursday": [
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 33,
+            "name": "Shahadat Ahmed",
+            "email": "shahadat.ahmed@g.bracu.ac.bd",
+            "student_id": "20301481",
+            "course": "MAT110 (5,6,11,12)",
+            "section": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "schedule": "11:00 AM - 12:20 PM",
+    "scheduleId": 3,
+    "Saturday": [
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 8,
+        "stDetails": [
+          {
+            "id": 37,
+            "name": "Salsabil Tanjim",
+            "email": "salsabil.tanjim@g.bracu.ac.bd",
+            "student_id": "20301354",
+            "course": "MAT110 (17,18,19,24)",
+            "section": 4
+          },
+          {
+            "id": 39,
+            "name": "Istiaq Ahmad",
+            "email": "istiaq.ahmad1@g.bracu.ac.bd",
+            "student_id": "20301056",
+            "course": "MAT216 (14,15,16,18)",
+            "section": 4
+          },
+          {
+            "id": 28,
+            "name": "Utsha Sen Dhruba",
+            "email": "utsha.sen.dhruba@g.bracu.ac.bd",
+            "student_id": "20301338",
+            "course": "MAT110 (3,4,13,16)",
+            "section": 4
+          },
+          {
+            "id": 36,
+            "name": "Ishrat Jahan",
+            "email": "ishrat.jahan5@g.bracu.ac.bd",
+            "student_id": "20301152",
+            "course": "MAT216 (4,11,13,17)",
+            "section": 4
+          },
+          {
+            "id": 12,
+            "name": "Sadman Sakib Nahid",
+            "email": "sadman.sakib.nahid@g.bracu.ac.bd",
+            "student_id": "19201029",
+            "course": "PHY112(3,11,15,17)",
+            "section": 4
+          },
+          {
+            "id": 5,
+            "name": "Abdul Halim Hosain",
+            "email": "abdul.halim.hosain@g.bracu.ac.bd",
+            "student_id": "20101300",
+            "course": "PHY101(1),PHY111(14,35,36)",
+            "section": 4
+          },
+          {
+            "id": 18,
+            "name": "Nusrat Zaman Raya",
+            "email": "nusrat.zaman.raya@g.bracu.ac.bd",
+            "student_id": "20301110",
+            "course": "PHY111 (13,24,29)",
+            "section": 3
+          },
+          {
+            "id": 16,
+            "name": "Atonu Roy Chowdhury",
+            "email": "atonu.roy.chowdhury@g.bracu.ac.bd",
+            "student_id": "20216008",
+            "course": "MAT311, MAT313, MAT434",
+            "section": 3
+          }
+        ]
+      },
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 7,
+            "name": "Tasmim Afroj Lamia",
+            "email": "tasmim.afroj.lamia@g.bracu.ac.bd",
+            "student_id": "19301190",
+            "course": "PHY112(1,6,7,9)",
+            "section": 4
+          },
+          {
+            "id": 38,
+            "name": "Radoan Sharkar",
+            "email": "radoan.sharkar@g.bracu.ac.bd",
+            "student_id": "20101263",
+            "course": "MAT110 (25,26), MAT120 (5,6)",
+            "section": 4
+          },
+          {
+            "id": 29,
+            "name": "Nafiz Siddiqui Adnan",
+            "email": "md.nafiz.siddiki@g.bracu.ac.bd",
+            "student_id": "20301016",
+            "course": "MAT120 (8,10,15,16)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Sunday": [
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 7,
+        "stDetails": [
+          {
+            "id": 36,
+            "name": "Ishrat Jahan",
+            "email": "ishrat.jahan5@g.bracu.ac.bd",
+            "student_id": "20301152",
+            "course": "MAT216 (4,11,13,17)",
+            "section": 4
+          },
+          {
+            "id": 17,
+            "name": "Saadat Rafid Ahmed",
+            "email": "saadat.rafid.ahmed@g.bracu.ac.bd",
+            "student_id": "20101425",
+            "course": "PHY112(4,12,14,18)",
+            "section": 4
+          },
+          {
+            "id": 43,
+            "name": "Rubayet Shareen",
+            "email": "rubayet.shareen@g.bracu.ac.bd",
+            "student_id": "20101434",
+            "course": "MAT120 (9,11,12,21)",
+            "section": 4
+          },
+          {
+            "id": 32,
+            "name": "Enam Ahmed Taufik",
+            "email": "enam.ahmed.taufik@g.bracu.ac.bd",
+            "student_id": "20301398",
+            "course": "MAT110 (7,8,23,29)",
+            "section": 4
+          },
+          {
+            "id": 30,
+            "name": "Rubayet Mahjabin",
+            "email": "rubayet.mahjabin@g.bracu.ac.bd",
+            "student_id": "20101011",
+            "course": "MAT120 (1,2,3,4)",
+            "section": 4
+          },
+          {
+            "id": 31,
+            "name": "Farhan Ishraq Fagun",
+            "email": "farhan.ishraq.fagun@g.bracu.ac.bd",
+            "student_id": "20101295",
+            "course": "MAT120 (7,17,18,19)",
+            "section": 4
+          },
+          {
+            "id": 35,
+            "name": "S M ISHTIAK MAHMUD",
+            "email": "sm.ishtiak.mahmud@g.bracu.ac.bd",
+            "student_id": "20301071",
+            "course": "MAT216 (2,3,6,7)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 19,
+            "name": "Masuda Rahman Fatima ",
+            "email": "masuda.rahman.fatima@g.bracu.ac.bd",
+            "student_id": "20101015",
+            "course": "MAT222, MAT205, MAT215(1)",
+            "section": 3
+          }
+        ]
+      }
+    ],
+    "Monday": [
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 5,
+        "stDetails": [
+          {
+            "id": 22,
+            "name": "MD.SHAWON MOLLAH",
+            "email": "md.shawon.mollah@g.bracu.ac.bd",
+            "student_id": "19201103",
+            "course": "MAT120 (20), MAT092 (1,2,9)",
+            "section": 4
+          },
+          {
+            "id": 13,
+            "name": "Maiesha Fahomida",
+            "email": "maiesha.fahomida@g.bracu.ac.bd",
+            "student_id": "20101515",
+            "course": "PHY112(2,5,8,10)",
+            "section": 4
+          },
+          {
+            "id": 9,
+            "name": "Asif Zubayer Palak ",
+            "email": "asif.zubayer.palak@g.bracu.ac.bd",
+            "student_id": "20101179",
+            "course": "PHY111(15,16,18,34)",
+            "section": 4
+          },
+          {
+            "id": 7,
+            "name": "Tasmim Afroj Lamia",
+            "email": "tasmim.afroj.lamia@g.bracu.ac.bd",
+            "student_id": "19301190",
+            "course": "PHY112(1,6,7,9)",
+            "section": 4
+          },
+          {
+            "id": 41,
+            "name": "Maliha Binta Islam",
+            "email": "maliha.binta.islam@g.bracu.ac.bd",
+            "student_id": "20101587",
+            "course": "MAT215 (7,8,10,11)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 42,
+            "name": "Shahrin Rahman",
+            "email": "shahrin.rahman@g.bracu.ac.bd",
+            "student_id": "20101464",
+            "course": "MAT120 (13,14,22,23)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Tuesday": [
+      {
+        "dayId": 4,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 7,
+        "stDetails": [
+          {
+            "id": 15,
+            "name": "Md. Fardaus Hasan Faruk",
+            "email": "md.fardaus.hasan.faruk@g.bracu.ac.bd",
+            "student_id": "20321024",
+            "course": "PHY111 (4,6,11,20)",
+            "section": 4
+          },
+          {
+            "id": 28,
+            "name": "Utsha Sen Dhruba",
+            "email": "utsha.sen.dhruba@g.bracu.ac.bd",
+            "student_id": "20301338",
+            "course": "MAT110 (3,4,13,16)",
+            "section": 4
+          },
+          {
+            "id": 22,
+            "name": "MD.SHAWON MOLLAH",
+            "email": "md.shawon.mollah@g.bracu.ac.bd",
+            "student_id": "19201103",
+            "course": "MAT120 (20), MAT092 (1,2,9)",
+            "section": 4
+          },
+          {
+            "id": 32,
+            "name": "Enam Ahmed Taufik",
+            "email": "enam.ahmed.taufik@g.bracu.ac.bd",
+            "student_id": "20301398",
+            "course": "MAT110 (7,8,23,29)",
+            "section": 4
+          },
+          {
+            "id": 31,
+            "name": "Farhan Ishraq Fagun",
+            "email": "farhan.ishraq.fagun@g.bracu.ac.bd",
+            "student_id": "20101295",
+            "course": "MAT120 (7,17,18,19)",
+            "section": 4
+          },
+          {
+            "id": 40,
+            "name": "Alpona Azrin",
+            "email": "alpona.azrin@g.bracu.ac.bd",
+            "student_id": "21101135",
+            "course": "MAT110 (21,22,27,28)",
+            "section": 4
+          },
+          {
+            "id": 38,
+            "name": "Radoan Sharkar",
+            "email": "radoan.sharkar@g.bracu.ac.bd",
+            "student_id": "20101263",
+            "course": "MAT110 (25,26), MAT120 (5,6)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 4,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 19,
+            "name": "Masuda Rahman Fatima ",
+            "email": "masuda.rahman.fatima@g.bracu.ac.bd",
+            "student_id": "20101015",
+            "course": "MAT222, MAT205, MAT215(1)",
+            "section": 3
+          }
+        ]
+      }
+    ],
+    "Wednesday": [
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 22,
+            "name": "MD.SHAWON MOLLAH",
+            "email": "md.shawon.mollah@g.bracu.ac.bd",
+            "student_id": "19201103",
+            "course": "MAT120 (20), MAT092 (1,2,9)",
+            "section": 4
+          },
+          {
+            "id": 13,
+            "name": "Maiesha Fahomida",
+            "email": "maiesha.fahomida@g.bracu.ac.bd",
+            "student_id": "20101515",
+            "course": "PHY112(2,5,8,10)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Thursday": [
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 8,
+        "stDetails": [
+          {
+            "id": 39,
+            "name": "Istiaq Ahmad",
+            "email": "istiaq.ahmad1@g.bracu.ac.bd",
+            "student_id": "20301056",
+            "course": "MAT216 (14,15,16,18)",
+            "section": 4
+          },
+          {
+            "id": 34,
+            "name": "Tasfia Tarannum",
+            "email": "tasfia.tarannum@g.bracu.ac.bd",
+            "student_id": "20101237",
+            "course": "MAT110 (9,10,15,20)",
+            "section": 4
+          },
+          {
+            "id": 24,
+            "name": "Taslima Islam",
+            "email": "taslima.islam@g.bracu.ac.bd",
+            "student_id": "20101603",
+            "course": "MAT215 (4,9,12,13)",
+            "section": 4
+          },
+          {
+            "id": 28,
+            "name": "Utsha Sen Dhruba",
+            "email": "utsha.sen.dhruba@g.bracu.ac.bd",
+            "student_id": "20301338",
+            "course": "MAT110 (3,4,13,16)",
+            "section": 4
+          },
+          {
+            "id": 12,
+            "name": "Sadman Sakib Nahid",
+            "email": "sadman.sakib.nahid@g.bracu.ac.bd",
+            "student_id": "19201029",
+            "course": "PHY112(3,11,15,17)",
+            "section": 4
+          },
+          {
+            "id": 36,
+            "name": "Ishrat Jahan",
+            "email": "ishrat.jahan5@g.bracu.ac.bd",
+            "student_id": "20301152",
+            "course": "MAT216 (4,11,13,17)",
+            "section": 4
+          },
+          {
+            "id": 5,
+            "name": "Abdul Halim Hosain",
+            "email": "abdul.halim.hosain@g.bracu.ac.bd",
+            "student_id": "20101300",
+            "course": "PHY101(1),PHY111(14,35,36)",
+            "section": 4
+          },
+          {
+            "id": 4,
+            "name": "Tabassum Nusrat Jahan ",
+            "email": "tabasum.nusrat.jahan@g.bracu.ac.bd",
+            "student_id": "19201027",
+            "course": "PHY111 (21,23,27,28,30)",
+            "section": 5
+          }
+        ]
+      },
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 7,
+            "name": "Tasmim Afroj Lamia",
+            "email": "tasmim.afroj.lamia@g.bracu.ac.bd",
+            "student_id": "19301190",
+            "course": "PHY112(1,6,7,9)",
+            "section": 4
+          },
+          {
+            "id": 3,
+            "name": "Saif Ar Rasul",
+            "email": "saif.ar.rasul@g.bracu.ac.bd",
+            "student_id": "20111003",
+            "course": "PHY303, PHY112 (4)",
+            "section": 2
+          },
+          {
+            "id": 38,
+            "name": "Radoan Sharkar",
+            "email": "radoan.sharkar@g.bracu.ac.bd",
+            "student_id": "20101263",
+            "course": "MAT110 (25,26), MAT120 (5,6)",
+            "section": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "schedule": "12:30 PM - 01:50 PM",
+    "scheduleId": 4,
+    "Saturday": [
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 7,
+        "stDetails": [
+          {
+            "id": 14,
+            "name": "Kazi Al Refat Pranta ",
+            "email": "kazi.al.refat.pranta@g.bracu.ac.bd",
+            "student_id": "20101444",
+            "course": "PHY111 (3,5,10,12)",
+            "section": 4
+          },
+          {
+            "id": 34,
+            "name": "Tasfia Tarannum",
+            "email": "tasfia.tarannum@g.bracu.ac.bd",
+            "student_id": "20101237",
+            "course": "MAT110 (9,10,15,20)",
+            "section": 4
+          },
+          {
+            "id": 18,
+            "name": "Nusrat Zaman Raya",
+            "email": "nusrat.zaman.raya@g.bracu.ac.bd",
+            "student_id": "20301110",
+            "course": "PHY111 (13,24,29)",
+            "section": 3
+          },
+          {
+            "id": 9,
+            "name": "Asif Zubayer Palak ",
+            "email": "asif.zubayer.palak@g.bracu.ac.bd",
+            "student_id": "20101179",
+            "course": "PHY111(15,16,18,34)",
+            "section": 4
+          },
+          {
+            "id": 16,
+            "name": "Atonu Roy Chowdhury",
+            "email": "atonu.roy.chowdhury@g.bracu.ac.bd",
+            "student_id": "20216008",
+            "course": "MAT311, MAT313, MAT434",
+            "section": 3
+          },
+          {
+            "id": 27,
+            "name": "Aabrar Islam",
+            "email": "aabrar.islam@g.bracu.ac.bd",
+            "student_id": "20101361",
+            "course": "MAT091 (1), MAT092 (7,10)",
+            "section": 4
+          },
+          {
+            "id": 29,
+            "name": "Nafiz Siddiqui Adnan",
+            "email": "md.nafiz.siddiki@g.bracu.ac.bd",
+            "student_id": "20301016",
+            "course": "MAT120 (8,10,15,16)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Sunday": [
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 7,
+        "stDetails": [
+          {
+            "id": 6,
+            "name": "Md. Raihanul Islam Bhuiyan",
+            "email": "raihanul.islam.bhuiyan@g.bracu.ac.bd",
+            "student_id": "20101239",
+            "course": "PHY111(2,9,26,31)",
+            "section": 4
+          },
+          {
+            "id": 29,
+            "name": "Nafiz Siddiqui Adnan",
+            "email": "md.nafiz.siddiki@g.bracu.ac.bd",
+            "student_id": "20301016",
+            "course": "MAT120 (8,10,15,16)",
+            "section": 4
+          },
+          {
+            "id": 36,
+            "name": "Ishrat Jahan",
+            "email": "ishrat.jahan5@g.bracu.ac.bd",
+            "student_id": "20301152",
+            "course": "MAT216 (4,11,13,17)",
+            "section": 4
+          },
+          {
+            "id": 17,
+            "name": "Saadat Rafid Ahmed",
+            "email": "saadat.rafid.ahmed@g.bracu.ac.bd",
+            "student_id": "20101425",
+            "course": "PHY112(4,12,14,18)",
+            "section": 4
+          },
+          {
+            "id": 43,
+            "name": "Rubayet Shareen",
+            "email": "rubayet.shareen@g.bracu.ac.bd",
+            "student_id": "20101434",
+            "course": "MAT120 (9,11,12,21)",
+            "section": 4
+          },
+          {
+            "id": 32,
+            "name": "Enam Ahmed Taufik",
+            "email": "enam.ahmed.taufik@g.bracu.ac.bd",
+            "student_id": "20301398",
+            "course": "MAT110 (7,8,23,29)",
+            "section": 4
+          },
+          {
+            "id": 35,
+            "name": "S M ISHTIAK MAHMUD",
+            "email": "sm.ishtiak.mahmud@g.bracu.ac.bd",
+            "student_id": "20301071",
+            "course": "MAT216 (2,3,6,7)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 10,
+            "name": "Sitima Moeen",
+            "email": "sitima.moeen@g.bracu.ac.bd",
+            "student_id": "19211002",
+            "course": "PHY114, PHY306, PHY112 (13)",
+            "section": 4
+          },
+          {
+            "id": 44,
+            "name": "Maheen Mehjabeen Rahim",
+            "email": "maheen.mehjabeen.rahim@g.bracu.ac.bd",
+            "student_id": "20141012",
+            "course": "MAT212, MAT216 (8,12)",
+            "section": 3
+          }
+        ]
+      }
+    ],
+    "Monday": [
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 7,
+        "stDetails": [
+          {
+            "id": 15,
+            "name": "Md. Fardaus Hasan Faruk",
+            "email": "md.fardaus.hasan.faruk@g.bracu.ac.bd",
+            "student_id": "20321024",
+            "course": "PHY111 (4,6,11,20)",
+            "section": 4
+          },
+          {
+            "id": 27,
+            "name": "Aabrar Islam",
+            "email": "aabrar.islam@g.bracu.ac.bd",
+            "student_id": "20101361",
+            "course": "MAT091 (1), MAT092 (7,10)",
+            "section": 4
+          },
+          {
+            "id": 28,
+            "name": "Utsha Sen Dhruba",
+            "email": "utsha.sen.dhruba@g.bracu.ac.bd",
+            "student_id": "20301338",
+            "course": "MAT110 (3,4,13,16)",
+            "section": 4
+          },
+          {
+            "id": 9,
+            "name": "Asif Zubayer Palak ",
+            "email": "asif.zubayer.palak@g.bracu.ac.bd",
+            "student_id": "20101179",
+            "course": "PHY111(15,16,18,34)",
+            "section": 4
+          },
+          {
+            "id": 16,
+            "name": "Atonu Roy Chowdhury",
+            "email": "atonu.roy.chowdhury@g.bracu.ac.bd",
+            "student_id": "20216008",
+            "course": "MAT311, MAT313, MAT434",
+            "section": 3
+          },
+          {
+            "id": 43,
+            "name": "Rubayet Shareen",
+            "email": "rubayet.shareen@g.bracu.ac.bd",
+            "student_id": "20101434",
+            "course": "MAT120 (9,11,12,21)",
+            "section": 4
+          },
+          {
+            "id": 17,
+            "name": "Saadat Rafid Ahmed",
+            "email": "saadat.rafid.ahmed@g.bracu.ac.bd",
+            "student_id": "20101425",
+            "course": "PHY112(4,12,14,18)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 21,
+            "name": "Umme Fatema Fiza",
+            "email": "umme.fatema.fiza@g.bracu.ac.bd",
+            "student_id": "20116001",
+            "course": "MAT105, MAT111, MAT216 (9)",
+            "section": 3
+          },
+          {
+            "id": 4,
+            "name": "Tabassum Nusrat Jahan ",
+            "email": "tabasum.nusrat.jahan@g.bracu.ac.bd",
+            "student_id": "19201027",
+            "course": "PHY111 (21,23,27,28,30)",
+            "section": 5
+          },
+          {
+            "id": 12,
+            "name": "Sadman Sakib Nahid",
+            "email": "sadman.sakib.nahid@g.bracu.ac.bd",
+            "student_id": "19201029",
+            "course": "PHY112(3,11,15,17)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Tuesday": [
+      {
+        "dayId": 4,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 11,
+            "name": "Tasfia Ayesha",
+            "email": "tasfia.ayesha@g.bracu.ac.bd",
+            "student_id": "20101478",
+            "course": "PHY111(7,8,19,32)",
+            "section": 4
+          },
+          {
+            "id": 38,
+            "name": "Radoan Sharkar",
+            "email": "radoan.sharkar@g.bracu.ac.bd",
+            "student_id": "20101263",
+            "course": "MAT110 (25,26), MAT120 (5,6)",
+            "section": 4
+          },
+          {
+            "id": 15,
+            "name": "Md. Fardaus Hasan Faruk",
+            "email": "md.fardaus.hasan.faruk@g.bracu.ac.bd",
+            "student_id": "20321024",
+            "course": "PHY111 (4,6,11,20)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 4,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 10,
+            "name": "Sitima Moeen",
+            "email": "sitima.moeen@g.bracu.ac.bd",
+            "student_id": "19211002",
+            "course": "PHY114, PHY306, PHY112 (13)",
+            "section": 4
+          },
+          {
+            "id": 6,
+            "name": "Md. Raihanul Islam Bhuiyan",
+            "email": "raihanul.islam.bhuiyan@g.bracu.ac.bd",
+            "student_id": "20101239",
+            "course": "PHY111(2,9,26,31)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Wednesday": [
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 15,
+            "name": "Md. Fardaus Hasan Faruk",
+            "email": "md.fardaus.hasan.faruk@g.bracu.ac.bd",
+            "student_id": "20321024",
+            "course": "PHY111 (4,6,11,20)",
+            "section": 4
+          },
+          {
+            "id": 27,
+            "name": "Aabrar Islam",
+            "email": "aabrar.islam@g.bracu.ac.bd",
+            "student_id": "20101361",
+            "course": "MAT091 (1), MAT092 (7,10)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 20,
+            "name": "Abeda Zahid Chandrica",
+            "email": "abeda.zahid.chandrica@g.bracu.ac.bd",
+            "student_id": "22341061",
+            "course": "MAT316, MAT216 (1,5,10)",
+            "section": 4
+          },
+          {
+            "id": 12,
+            "name": "Sadman Sakib Nahid",
+            "email": "sadman.sakib.nahid@g.bracu.ac.bd",
+            "student_id": "19201029",
+            "course": "PHY112(3,11,15,17)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Thursday": [
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 5,
+        "stDetails": [
+          {
+            "id": 24,
+            "name": "Taslima Islam",
+            "email": "taslima.islam@g.bracu.ac.bd",
+            "student_id": "20101603",
+            "course": "MAT215 (4,9,12,13)",
+            "section": 4
+          },
+          {
+            "id": 9,
+            "name": "Asif Zubayer Palak ",
+            "email": "asif.zubayer.palak@g.bracu.ac.bd",
+            "student_id": "20101179",
+            "course": "PHY111(15,16,18,34)",
+            "section": 4
+          },
+          {
+            "id": 30,
+            "name": "Rubayet Mahjabin",
+            "email": "rubayet.mahjabin@g.bracu.ac.bd",
+            "student_id": "20101011",
+            "course": "MAT120 (1,2,3,4)",
+            "section": 4
+          },
+          {
+            "id": 14,
+            "name": "Kazi Al Refat Pranta ",
+            "email": "kazi.al.refat.pranta@g.bracu.ac.bd",
+            "student_id": "20101444",
+            "course": "PHY111 (3,5,10,12)",
+            "section": 4
+          },
+          {
+            "id": 41,
+            "name": "Maliha Binta Islam",
+            "email": "maliha.binta.islam@g.bracu.ac.bd",
+            "student_id": "20101587",
+            "course": "MAT215 (7,8,10,11)",
+            "section": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "schedule": "02:00 PM - 03:20 PM",
+    "scheduleId": 5,
+    "Saturday": [
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 25,
+            "name": "Sk Jamil Hossain",
+            "email": "sk.jamil.hossain@g.bracu.ac.bd",
+            "student_id": "20301261",
+            "course": "MAT110 (1,2,14,30)",
+            "section": 4
+          },
+          {
+            "id": 27,
+            "name": "Aabrar Islam",
+            "email": "aabrar.islam@g.bracu.ac.bd",
+            "student_id": "20101361",
+            "course": "MAT091 (1), MAT092 (7,10)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Sunday": [
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 26,
+            "name": "Farhan Tanvir Efty",
+            "email": "farhan.tanvir.efty@g.bracu.ac.bd",
+            "student_id": "19301014",
+            "course": "MAT091 (4), MAT092 (5,6,8)",
+            "section": 4
+          },
+          {
+            "id": 6,
+            "name": "Md. Raihanul Islam Bhuiyan",
+            "email": "raihanul.islam.bhuiyan@g.bracu.ac.bd",
+            "student_id": "20101239",
+            "course": "PHY111(2,9,26,31)",
+            "section": 4
+          },
+          {
+            "id": 5,
+            "name": "Abdul Halim Hosain",
+            "email": "abdul.halim.hosain@g.bracu.ac.bd",
+            "student_id": "20101300",
+            "course": "PHY101(1),PHY111(14,35,36)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 20,
+            "name": "Abeda Zahid Chandrica",
+            "email": "abeda.zahid.chandrica@g.bracu.ac.bd",
+            "student_id": "22341061",
+            "course": "MAT316, MAT216 (1,5,10)",
+            "section": 4
+          },
+          {
+            "id": 3,
+            "name": "Saif Ar Rasul",
+            "email": "saif.ar.rasul@g.bracu.ac.bd",
+            "student_id": "20111003",
+            "course": "PHY303, PHY112 (4)",
+            "section": 2
+          }
+        ]
+      }
+    ],
+    "Monday": [
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 4,
+        "stDetails": [
+          {
+            "id": 33,
+            "name": "Shahadat Ahmed",
+            "email": "shahadat.ahmed@g.bracu.ac.bd",
+            "student_id": "20301481",
+            "course": "MAT110 (5,6,11,12)",
+            "section": 4
+          },
+          {
+            "id": 25,
+            "name": "Sk Jamil Hossain",
+            "email": "sk.jamil.hossain@g.bracu.ac.bd",
+            "student_id": "20301261",
+            "course": "MAT110 (1,2,14,30)",
+            "section": 4
+          },
+          {
+            "id": 11,
+            "name": "Tasfia Ayesha",
+            "email": "tasfia.ayesha@g.bracu.ac.bd",
+            "student_id": "20101478",
+            "course": "PHY111(7,8,19,32)",
+            "section": 4
+          },
+          {
+            "id": 40,
+            "name": "Alpona Azrin",
+            "email": "alpona.azrin@g.bracu.ac.bd",
+            "student_id": "21101135",
+            "course": "MAT110 (21,22,27,28)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 19,
+            "name": "Masuda Rahman Fatima ",
+            "email": "masuda.rahman.fatima@g.bracu.ac.bd",
+            "student_id": "20101015",
+            "course": "MAT222, MAT205, MAT215(1)",
+            "section": 3
+          },
+          {
+            "id": 20,
+            "name": "Abeda Zahid Chandrica",
+            "email": "abeda.zahid.chandrica@g.bracu.ac.bd",
+            "student_id": "22341061",
+            "course": "MAT316, MAT216 (1,5,10)",
+            "section": 4
+          },
+          {
+            "id": 4,
+            "name": "Tabassum Nusrat Jahan ",
+            "email": "tabasum.nusrat.jahan@g.bracu.ac.bd",
+            "student_id": "19201027",
+            "course": "PHY111 (21,23,27,28,30)",
+            "section": 5
+          }
+        ]
+      }
+    ],
+    "Tuesday": [
+      {
+        "dayId": 4,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 11,
+            "name": "Tasfia Ayesha",
+            "email": "tasfia.ayesha@g.bracu.ac.bd",
+            "student_id": "20101478",
+            "course": "PHY111(7,8,19,32)",
+            "section": 4
+          },
+          {
+            "id": 31,
+            "name": "Farhan Ishraq Fagun",
+            "email": "farhan.ishraq.fagun@g.bracu.ac.bd",
+            "student_id": "20101295",
+            "course": "MAT120 (7,17,18,19)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 4,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 3,
+            "name": "Saif Ar Rasul",
+            "email": "saif.ar.rasul@g.bracu.ac.bd",
+            "student_id": "20111003",
+            "course": "PHY303, PHY112 (4)",
+            "section": 2
+          }
+        ]
+      }
+    ],
+    "Wednesday": [
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 37,
+            "name": "Salsabil Tanjim",
+            "email": "salsabil.tanjim@g.bracu.ac.bd",
+            "student_id": "20301354",
+            "course": "MAT110 (17,18,19,24)",
+            "section": 4
+          },
+          {
+            "id": 6,
+            "name": "Md. Raihanul Islam Bhuiyan",
+            "email": "raihanul.islam.bhuiyan@g.bracu.ac.bd",
+            "student_id": "20101239",
+            "course": "PHY111(2,9,26,31)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 4,
+            "name": "Tabassum Nusrat Jahan ",
+            "email": "tabasum.nusrat.jahan@g.bracu.ac.bd",
+            "student_id": "19201027",
+            "course": "PHY111 (21,23,27,28,30)",
+            "section": 5
+          }
+        ]
+      }
+    ],
+    "Thursday": [
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 13,
+            "name": "Maiesha Fahomida",
+            "email": "maiesha.fahomida@g.bracu.ac.bd",
+            "student_id": "20101515",
+            "course": "PHY112(2,5,8,10)",
+            "section": 4
+          },
+          {
+            "id": 11,
+            "name": "Tasfia Ayesha",
+            "email": "tasfia.ayesha@g.bracu.ac.bd",
+            "student_id": "20101478",
+            "course": "PHY111(7,8,19,32)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 21,
+            "name": "Umme Fatema Fiza",
+            "email": "umme.fatema.fiza@g.bracu.ac.bd",
+            "student_id": "20116001",
+            "course": "MAT105, MAT111, MAT216 (9)",
+            "section": 3
+          },
+          {
+            "id": 25,
+            "name": "Sk Jamil Hossain",
+            "email": "sk.jamil.hossain@g.bracu.ac.bd",
+            "student_id": "20301261",
+            "course": "MAT110 (1,2,14,30)",
+            "section": 4
+          },
+          {
+            "id": 44,
+            "name": "Maheen Mehjabeen Rahim",
+            "email": "maheen.mehjabeen.rahim@g.bracu.ac.bd",
+            "student_id": "20141012",
+            "course": "MAT212, MAT216 (8,12)",
+            "section": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "schedule": "03:30 PM - 04:50 PM",
+    "scheduleId": 6,
+    "Saturday": [
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 25,
+            "name": "Sk Jamil Hossain",
+            "email": "sk.jamil.hossain@g.bracu.ac.bd",
+            "student_id": "20301261",
+            "course": "MAT110 (1,2,14,30)",
+            "section": 4
+          },
+          {
+            "id": 17,
+            "name": "Saadat Rafid Ahmed",
+            "email": "saadat.rafid.ahmed@g.bracu.ac.bd",
+            "student_id": "20101425",
+            "course": "PHY112(4,12,14,18)",
+            "section": 4
+          },
+          {
+            "id": 43,
+            "name": "Rubayet Shareen",
+            "email": "rubayet.shareen@g.bracu.ac.bd",
+            "student_id": "20101434",
+            "course": "MAT120 (9,11,12,21)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 1,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 21,
+            "name": "Umme Fatema Fiza",
+            "email": "umme.fatema.fiza@g.bracu.ac.bd",
+            "student_id": "20116001",
+            "course": "MAT105, MAT111, MAT216 (9)",
+            "section": 3
+          },
+          {
+            "id": 44,
+            "name": "Maheen Mehjabeen Rahim",
+            "email": "maheen.mehjabeen.rahim@g.bracu.ac.bd",
+            "student_id": "20141012",
+            "course": "MAT212, MAT216 (8,12)",
+            "section": 3
+          }
+        ]
+      }
+    ],
+    "Sunday": [
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 5,
+            "name": "Abdul Halim Hosain",
+            "email": "abdul.halim.hosain@g.bracu.ac.bd",
+            "student_id": "20101300",
+            "course": "PHY101(1),PHY111(14,35,36)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 2,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 20,
+            "name": "Abeda Zahid Chandrica",
+            "email": "abeda.zahid.chandrica@g.bracu.ac.bd",
+            "student_id": "22341061",
+            "course": "MAT316, MAT216 (1,5,10)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Monday": [
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 30,
+            "name": "Rubayet Mahjabin",
+            "email": "rubayet.mahjabin@g.bracu.ac.bd",
+            "student_id": "20101011",
+            "course": "MAT120 (1,2,3,4)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 3,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 3,
+        "stDetails": [
+          {
+            "id": 19,
+            "name": "Masuda Rahman Fatima ",
+            "email": "masuda.rahman.fatima@g.bracu.ac.bd",
+            "student_id": "20101015",
+            "course": "MAT222, MAT205, MAT215(1)",
+            "section": 3
+          },
+          {
+            "id": 10,
+            "name": "Sitima Moeen",
+            "email": "sitima.moeen@g.bracu.ac.bd",
+            "student_id": "19211002",
+            "course": "PHY114, PHY306, PHY112 (13)",
+            "section": 4
+          },
+          {
+            "id": 3,
+            "name": "Saif Ar Rasul",
+            "email": "saif.ar.rasul@g.bracu.ac.bd",
+            "student_id": "20111003",
+            "course": "PHY303, PHY112 (4)",
+            "section": 2
+          }
+        ]
+      }
+    ],
+    "Tuesday": [
+      {
+        "dayId": 4,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 16,
+            "name": "Atonu Roy Chowdhury",
+            "email": "atonu.roy.chowdhury@g.bracu.ac.bd",
+            "student_id": "20216008",
+            "course": "MAT311, MAT313, MAT434",
+            "section": 3
+          }
+        ]
+      }
+    ],
+    "Wednesday": [
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 30,
+            "name": "Rubayet Mahjabin",
+            "email": "rubayet.mahjabin@g.bracu.ac.bd",
+            "student_id": "20101011",
+            "course": "MAT120 (1,2,3,4)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 5,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 10,
+            "name": "Sitima Moeen",
+            "email": "sitima.moeen@g.bracu.ac.bd",
+            "student_id": "19211002",
+            "course": "PHY114, PHY306, PHY112 (13)",
+            "section": 4
+          }
+        ]
+      }
+    ],
+    "Thursday": [
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 2,
+          "name": "UB71004"
+        },
+        "sts": 1,
+        "stDetails": [
+          {
+            "id": 13,
+            "name": "Maiesha Fahomida",
+            "email": "maiesha.fahomida@g.bracu.ac.bd",
+            "student_id": "20101515",
+            "course": "PHY112(2,5,8,10)",
+            "section": 4
+          }
+        ]
+      },
+      {
+        "dayId": 6,
+        "room": {
+          "roomId": 5,
+          "name": "UB60601"
+        },
+        "sts": 2,
+        "stDetails": [
+          {
+            "id": 21,
+            "name": "Umme Fatema Fiza",
+            "email": "umme.fatema.fiza@g.bracu.ac.bd",
+            "student_id": "20116001",
+            "course": "MAT105, MAT111, MAT216 (9)",
+            "section": 3
+          },
+          {
+            "id": 44,
+            "name": "Maheen Mehjabeen Rahim",
+            "email": "maheen.mehjabeen.rahim@g.bracu.ac.bd",
+            "student_id": "20141012",
+            "course": "MAT212, MAT216 (8,12)",
+            "section": 3
+          }
+        ]
+      }
+    ]
+  }
+]
