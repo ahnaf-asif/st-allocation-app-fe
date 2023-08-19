@@ -15,8 +15,6 @@ export const AdminStaticRoutine = () => {
   const [filteredStsModal, setFilteredStsModal] = useState(false);
   const getRoutine = async () => {
     try {
-      // const resp = await axios.get('/admin/routine');
-      // console.log('routine: ', resp.data);
       setRoutine(StaticRoutine);
     } catch (e) {
       notifications.show({

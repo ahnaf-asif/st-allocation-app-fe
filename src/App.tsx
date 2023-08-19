@@ -13,7 +13,8 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!auth.dispatched) {
+    if (pathname.includes('static-routine')) {
+    } else if (!auth.dispatched) {
       const jwtToken = localStorage.getItem('jwtToken');
       if (!jwtToken && pathname !== '/login') {
         dispatch(clearAuth());
