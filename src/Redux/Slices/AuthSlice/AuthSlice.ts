@@ -28,7 +28,8 @@ export const loginUser = createAsyncThunk(
         section: resp.user.section,
         iat: resp.user.iat,
         exp: resp.user.exp,
-        isAdmin: resp.user.isAdmin
+        isAdmin: resp.user.isAdmin,
+        isSuperAdmin: resp.user.isSuperAdmin
       };
 
       return user;
@@ -66,7 +67,8 @@ export const authSlice = createSlice({
         section: resp.user.section,
         iat: resp.user.iat,
         exp: resp.user.exp,
-        isAdmin: resp.user.isAdmin
+        isAdmin: resp.user.isAdmin,
+        isSuperAdmin: resp.user.isSuperAdmin
       };
 
       state.loading = false;

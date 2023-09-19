@@ -145,15 +145,6 @@ export const AllStTable = ({ allSts, getAllSts }: { allSts: any[]; getAllSts: an
             sortable: true
           },
           {
-            accessor: 'section',
-            sortable: true
-          },
-          {
-            accessor: 'rawPassword',
-            title: 'Password',
-            sortable: true
-          },
-          {
             accessor: 'action',
             render: (st: any) => {
               return (
@@ -191,15 +182,8 @@ export const AllStTable = ({ allSts, getAllSts }: { allSts: any[]; getAllSts: an
           <TextInput
             mt={20}
             {...updateStForm.getInputProps('course')}
-            label="Course"
+            label="Course(s)"
             placeholder="enter the course"
-          />
-
-          <NumberInput
-            mt={20}
-            {...updateStForm.getInputProps('section')}
-            label="Section"
-            placeholder="enter the section"
           />
 
           <Flex mt={20} align="center" justify="flex-end" gap={10}>

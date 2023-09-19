@@ -11,7 +11,9 @@ export interface IUser {
 
   section?: number;
 
-  isAdmin: any;
+  isAdmin: boolean;
+
+  isSuperAdmin: boolean;
 
   iat: number;
 

@@ -16,11 +16,11 @@ import {
   StyledProfileWrapper
 } from './Header.styles';
 import { useState } from 'react';
-import { logo } from '@/Shared/Images';
 import { useAppDispatch, useAppSelector } from '@/Redux/hooks';
 import { clearAuth } from '@/Redux/Slices/AuthSlice';
 import { ChangePassword } from '@/Shared/Components';
 import { notifications } from '@mantine/notifications';
+import { CURRENT_SEMESTER, CURRENT_DEPARTMENT } from '@/Config';
 
 export const Header = ({ burgerAction, smallDevice }: any) => {
   const [menuClicked, setMenuClicked] = useState(false);
@@ -69,7 +69,8 @@ export const Header = ({ burgerAction, smallDevice }: any) => {
         <StyledLogoWrapper>
           <Link to={'/'}>
             <span>
-              ST ALLOCATION <span style={{ fontSize: '14px' }}> - Summer 2023</span>
+              ST PANEL({CURRENT_DEPARTMENT})
+              <span style={{ fontSize: '14px' }}> - {CURRENT_SEMESTER}</span>
             </span>
           </Link>
         </StyledLogoWrapper>

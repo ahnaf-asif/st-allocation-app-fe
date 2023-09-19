@@ -4,6 +4,7 @@ import {
   Card,
   Divider,
   Grid,
+  Modal,
   NumberInput,
   Text,
   TextInput,
@@ -18,9 +19,11 @@ import { AllStTable } from '@/Shared/Components/AllStTable/AllStTable';
 import { isEmail, isNotEmpty, useForm } from '@mantine/form';
 import { IconPlus } from '@tabler/icons-react';
 import { AxiosError } from 'axios';
+import { UploadStCsv } from './Components';
 
 export const StManagement = () => {
   const [allSts, setAllSts] = useState<any[]>([]);
+  const [addStModal, setAddStModal] = useState(false);
   const auth = useAppSelector((state) => state.auth);
 
   const getAllSts = async () => {
@@ -46,14 +49,12 @@ export const StManagement = () => {
       name: '',
       email: '',
       course: '',
-      section: 1,
       student_id: ''
     },
     validate: {
       name: isNotEmpty('Name cannot be empty'),
       email: isEmail('Please enter a valid email'),
       course: isNotEmpty('Course cannot be empty'),
-      section: isNotEmpty('Section cannot be empty'),
       student_id: isNotEmpty('Student ID cannot be empty')
     }
   });
@@ -93,38 +94,55 @@ export const StManagement = () => {
         </Text>
         <Divider />
       </Box>
-      <Box mt={30}>
-        <Card p={20} shadow="xs">
-          <Title mb={20} order={4}>
-            Add Student Tutor
-          </Title>
-          <form onSubmit={addStForm.onSubmit((values) => addSt(values))}>
-            <TextInput {...addStForm.getInputProps('name')} label="Name" />
-            <Grid gutter="xs">
-              <Grid.Col sm={6} span={12}>
-                <TextInput {...addStForm.getInputProps('email')} mt={20} label="Email" />
-              </Grid.Col>
-              <Grid.Col sm={6} span={12}>
-                <TextInput {...addStForm.getInputProps('student_id')} mt={20} label="Student ID" />
-              </Grid.Col>
-              <Grid.Col sm={6} span={12}>
-                <TextInput {...addStForm.getInputProps('course')} mt={20} label="Course" />
-              </Grid.Col>
-              <Grid.Col sm={6} span={12}>
-                <NumberInput
-                  {...addStForm.getInputProps('section')}
-                  mt={20}
-                  label="Section Number"
-                />
-              </Grid.Col>
-            </Grid>
 
-            <Button type="submit" mt={20}>
-              <IconPlus /> Add Student Tutor
-            </Button>
-          </form>
-        </Card>
+      <Box mt={30}>
+        <Button onClick={() => setAddStModal(!addStModal)}>Add New ST</Button>
       </Box>
+
+      <UploadStCsv getAllSts={getAllSts} />
+
+      <Modal
+        centered
+        size="xl"
+        withCloseButton={false}
+        opened={addStModal}
+        onClose={() => setAddStModal(false)}
+      >
+        <Box>
+          <Card p={20} shadow="xs">
+            <Title mb={20} order={4}>
+              Add Student Tutor
+            </Title>
+            <form onSubmit={addStForm.onSubmit((values) => addSt(values))}>
+              <TextInput {...addStForm.getInputProps('name')} label="Name" />
+              <Grid gutter="xs">
+                <Grid.Col sm={6} span={12}>
+                  <TextInput {...addStForm.getInputProps('email')} mt={20} label="Email" />
+                </Grid.Col>
+                <Grid.Col sm={6} span={12}>
+                  <TextInput
+                    {...addStForm.getInputProps('student_id')}
+                    mt={20}
+                    label="Student ID"
+                  />
+                </Grid.Col>
+                <Grid.Col sm={12} span={12}>
+                  <TextInput
+                    {...addStForm.getInputProps('course')}
+                    mt={20}
+                    label="Course(s)"
+                    description="Please put courses and section numbers in brackets. for example CSE110(1, 3), CSE221(5), where 1, 3, 5 are the sections of the corresponding courses."
+                  />
+                </Grid.Col>
+              </Grid>
+
+              <Button type="submit" mt={20}>
+                <IconPlus /> Add Student Tutor
+              </Button>
+            </form>
+          </Card>
+        </Box>
+      </Modal>
       <Box mt={30}>
         <AllStTable allSts={allSts} getAllSts={getAllSts} />
       </Box>

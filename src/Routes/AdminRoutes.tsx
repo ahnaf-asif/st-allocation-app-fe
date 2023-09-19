@@ -5,13 +5,18 @@ import {
   AdminDashboard,
   AdminRoutine,
   RoomManagement,
-  StManagement
+  StManagement,
+  SuperAdmin
 } from '@/Pages/AdminPages';
 
 export const AdminRoutes: RouteType[] = [
   {
     path: '/admin',
     element: <AdminDashboard />
+  },
+  {
+    path: '/admin/super',
+    element: <SuperAdmin />
   },
   {
     path: '/admin/room-management',
