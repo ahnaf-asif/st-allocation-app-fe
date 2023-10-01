@@ -16,6 +16,7 @@ export interface ICustomDatatable {
 
 import { filterRecords } from './Helpers';
 import { remove } from 'lodash';
+import { StyledSelect } from '@/Shared/Components';
 
 export const CustomDatatable = ({
   pageSize,
@@ -25,6 +26,8 @@ export const CustomDatatable = ({
   tableContent,
   removeFunctionality
 }: ICustomDatatable) => {
+  const [pSz, setPageSize] = useState(pageSize);
+  const [pageSizeValue, setPageSizeValue] = useState(pageSize.toString());
   const [page, setPage] = useState(1);
   const [records, setRecords] = useState(tableData.slice(0, pageSize));
   const [query, setQuery] = useState('');
@@ -34,15 +37,15 @@ export const CustomDatatable = ({
   });
 
   useEffect(() => {
-    const from = (page - 1) * pageSize;
-    const to = from + pageSize;
+    const from = (page - 1) * pSz;
+    const to = from + pSz;
     setRecords(tableData.slice(from, to));
   }, [page]);
 
   useEffect(() => {
     const data = sortBy(tableData, sortStatus.columnAccessor);
-    const from = (page - 1) * pageSize;
-    const to = from + pageSize;
+    const from = (page - 1) * pSz;
+    const to = from + pSz;
 
     setRecords(
       sortStatus.direction === 'desc' ? data.reverse().slice(from, to) : data.slice(from, to)
@@ -50,22 +53,37 @@ export const CustomDatatable = ({
   }, [sortStatus]);
 
   useEffect(() => {
-    setRecords(tableData.slice(0, pageSize));
+    setRecords(tableData.slice(0, pSz));
   }, [tableData]);
 
   useEffect(() => {
     const data = filterRecords(tableData, query);
-    setRecords(data.slice(0, pageSize));
+    setRecords(data.slice(0, pSz));
   }, [query]);
 
   const clearSearch = () => {
     setQuery('');
-    setRecords(tableData.slice(0, pageSize));
+    setRecords(tableData.slice(0, pSz));
     setSortStatus({
       columnAccessor: 'name',
       direction: 'asc'
     });
   };
+
+  const changePageSize = (value: string | null) => {
+    if (value == null) return;
+    setPageSizeValue(value);
+
+    if (value === 'All') {
+      setPageSize(tableData.length);
+    } else {
+      setPageSize(parseInt(value));
+    }
+  };
+
+  useEffect(() => {
+    clearSearch();
+  }, [pSz]);
 
   return (
     <Box>
@@ -77,7 +95,16 @@ export const CustomDatatable = ({
           {tableContent}
         </Text>
         <Grid mb={10} align="center">
-          <Grid.Col sm={9.8} span={12}>
+          <Grid.Col sm={2} span={12}>
+            <StyledSelect
+              value={pageSizeValue}
+              onChange={(value) => changePageSize(value)}
+              mt={15}
+              py={0}
+              data={['5', '10', '20', 'All']}
+            />
+          </Grid.Col>
+          <Grid.Col sm={7.8} span={12}>
             <TextInput
               icon={<IconSearch size={16} />}
               value={query}
@@ -101,7 +128,7 @@ export const CustomDatatable = ({
             sortStatus={sortStatus}
             onSortStatusChange={setSortStatus}
             totalRecords={tableData.length}
-            recordsPerPage={pageSize}
+            recordsPerPage={pSz}
             page={page}
             onPageChange={(p) => setPage(p)}
             columns={columns}

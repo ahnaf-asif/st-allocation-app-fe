@@ -19,7 +19,7 @@ import { useEffect, useState } from 'react';
 
 import { loginUser } from '@/Redux/Slices/AuthSlice';
 import { useAppDispatch, useAppSelector } from '@/Redux/hooks';
-import { StyledPasswordInput, StyledTextInput } from '@/Shared/Components';
+import { StyledLink, StyledPasswordInput, StyledTextInput } from '@/Shared/Components';
 import {
   StyledLoginCard,
   StyledLoginWrapperBox,
@@ -116,6 +116,11 @@ const Login = () => {
                   my={10}
                   {...form.getInputProps('password')}
                 />
+                <Box>
+                  <Text>
+                    <StyledLink to="/forgot-password">Forgot Password</StyledLink>
+                  </Text>
+                </Box>
                 <Box>
                   <LoadingOverlay visible={auth.loading} />
                   <Button type="submit" w="100%" mt={20} mb={5}>

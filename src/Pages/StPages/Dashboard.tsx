@@ -33,10 +33,6 @@ export const StDashboard = () => {
               <td>Course</td>
               <td>{auth?.user?.course}</td>
             </tr>
-            <tr>
-              <td>Section</td>
-              <td>{auth?.user?.section}</td>
-            </tr>
           </tbody>
         </Table>
       </Box>

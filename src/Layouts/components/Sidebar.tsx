@@ -5,7 +5,7 @@ import { sidebarMenu, adminSidebarMenu } from './SidebarConstants';
 import { StyledSidebarLink, StyledSidebarLinkWrapper } from './Sidebar.styles';
 import { COLOR_PALETTE } from '@/Shared/Constants';
 import { useAppSelector } from '@/Redux/hooks';
-import { IconHome } from '@tabler/icons-react';
+import { IconHome, IconUser } from '@tabler/icons-react';
 
 export const Sidebar = ({ admin }: any) => {
   const { pathname } = useLocation();
@@ -21,7 +21,7 @@ export const Sidebar = ({ admin }: any) => {
               to={'/admin/super'}
               active={pathname === '/admin/super' ? 'active' : 'inactive'}
             >
-              <IconHome size={20} stroke={1.5} style={{ marginBottom: '-4px' }} />
+              <IconUser size={20} stroke={1.5} style={{ marginBottom: '-4px' }} />
               &nbsp;Super Admin
             </StyledSidebarLink>
           </StyledSidebarLinkWrapper>

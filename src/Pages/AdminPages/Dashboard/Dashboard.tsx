@@ -12,6 +12,7 @@ import { AllRoomsTable } from '@/Shared/Components/AllRoomsTable/AllRoomsTable';
 export const AdminDashboard = () => {
   const [allSts, setAllSts] = useState<any[]>([]);
   const [allRooms, setAllRooms] = useState<any[]>([]);
+  const [allAdmins, setAllAdmins] = useState<any[]>([]);
   const auth = useAppSelector((state) => state.auth);
 
   const getAllSts = async () => {
@@ -39,10 +40,20 @@ export const AdminDashboard = () => {
     }
   };
 
+  const getAllAdmins = async () => {
+    try {
+      const resp = await axios.get('/admin/super/admins');
+      setAllAdmins(resp.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   useEffect(() => {
     if (auth.user) {
       getAllSts();
       getAllRooms();
+      getAllAdmins();
     }
   }, [auth]);
 
@@ -57,7 +68,12 @@ export const AdminDashboard = () => {
         <Box mt={30}>
           <Grid>
             <Grid.Col sm={4} span={6}>
-              <InfoCard title="Admins" data={1} bgColor="#068000" textColor="white" />
+              <InfoCard
+                title="Admins"
+                data={allAdmins.length}
+                bgColor="#068000"
+                textColor="white"
+              />
             </Grid.Col>
             <Grid.Col sm={4} span={6}>
               <InfoCard

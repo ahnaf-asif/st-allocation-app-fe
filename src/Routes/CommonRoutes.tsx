@@ -1,8 +1,6 @@
 import { RouteType } from './Types';
 
-import { Home } from '@/Pages';
-import { Login } from '@/Pages/DefaultPages/Login';
-import { AdminStaticRoutine } from '@/Pages/AdminPages';
+import { Home, Login, ForgotPassword, ResetPassword } from '@/Pages';
 
 export const CommonRoutes: RouteType[] = [
   {
@@ -14,7 +12,11 @@ export const CommonRoutes: RouteType[] = [
     element: <Login />
   },
   {
-    path: '/static-routine-cSVWGXHZtAeWibOft54o',
-    element: <AdminStaticRoutine />
+    path: '/forgot-password',
+    element: <ForgotPassword />
+  },
+  {
+    path: '/password-reset/:token',
+    element: <ResetPassword />
   }
 ];

@@ -1,4 +1,15 @@
-import { Box, Button, Flex, Modal, NumberInput, Text, TextInput, Title } from '@mantine/core';
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  Grid,
+  Modal,
+  NumberInput,
+  Text,
+  TextInput,
+  Title
+} from '@mantine/core';
 import { ChangePassword, CustomDatatable } from '@/Shared/Components';
 import { useState } from 'react';
 import { isEmail, isNotEmpty, useForm } from '@mantine/form';
@@ -142,23 +153,32 @@ export const AllStTable = ({ allSts, getAllSts }: { allSts: any[]; getAllSts: an
           },
           {
             accessor: 'course',
+            title: 'Course(s)',
             sortable: true
           },
           {
             accessor: 'action',
             render: (st: any) => {
               return (
-                <Flex justify="flex-end" gap={10}>
-                  <Button onClick={() => updatedButtonClicked(st)} color="green">
+                <Flex justify="space-around">
+                  <Button size="xs" onClick={() => updatedButtonClicked(st)} color="green">
                     Update
                   </Button>
-                  <Button onClick={() => changePasswordClicked(st)}>Change Password</Button>
-                  <Button onClick={() => deleteButtonClicked(st)} color="red">
+                  {/*<Button size="xs" onClick={() => changePasswordClicked(st)}>*/}
+                  {/*  Change Password*/}
+                  {/*</Button>*/}
+                  <Button size="xs" onClick={() => deleteButtonClicked(st)} color="red">
                     Delete
                   </Button>
                 </Flex>
               );
             }
+          },
+          {
+            accessor: 'verificationEmailSent',
+            title: 'Verification',
+            width: 200,
+            render: (st: any) => <Text>{st.verificationEmailSent ? 'Sent' : 'Not Sent'}</Text>
           }
         ]}
         tableData={allSts}

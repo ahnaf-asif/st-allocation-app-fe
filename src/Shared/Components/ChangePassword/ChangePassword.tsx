@@ -24,7 +24,6 @@ export const ChangePassword = ({
       confirmNewPassword: ''
     },
     validate: {
-      currentPassword: isNotEmpty('Enter your current password'),
       newPassword: (password) =>
         password.trim().length < 8 ? 'Password must be at least 8 characters' : null,
       confirmNewPassword: (confirm, { newPassword }: any) =>
@@ -69,11 +68,13 @@ export const ChangePassword = ({
         </Title>
 
         <form onSubmit={changePasswordForm.onSubmit(submitChangePassword)}>
-          <PasswordInput
-            {...changePasswordForm.getInputProps('currentPassword')}
-            label="Current Password"
-            mt={20}
-          />
+          {auth.user && !auth.user.isAdmin && (
+            <PasswordInput
+              {...changePasswordForm.getInputProps('currentPassword')}
+              label="Current Password"
+              mt={20}
+            />
+          )}
           <PasswordInput
             {...changePasswordForm.getInputProps('newPassword')}
             label="New Password"

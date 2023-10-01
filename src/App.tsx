@@ -13,7 +13,11 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (pathname.includes('static-routine')) {
+    if (
+      pathname.includes('static-routine') ||
+      pathname.includes('forgot-password') ||
+      pathname.includes('password-reset')
+    ) {
     } else if (!auth.dispatched) {
       const jwtToken = localStorage.getItem('jwtToken');
       if (!jwtToken && pathname !== '/login') {
