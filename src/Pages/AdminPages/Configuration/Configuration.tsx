@@ -116,7 +116,7 @@ export const AdminConfiguration = () => {
             <NumberInput
               {...configForm.getInputProps('totalPeriodsPerWeek')}
               mt={10}
-              label="Number of Sessions per week"
+              label="Minimum Number of Sessions per week"
             />
             <NumberInput
               {...configForm.getInputProps('maxPeriodsPerDay')}

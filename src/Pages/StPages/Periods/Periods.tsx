@@ -211,10 +211,16 @@ export const StPeriods = () => {
         {updateRoutineDeadline > new Date() ? (
           <Box>
             <Text color="dimmed" size="sm" mb={20}>
-              You have to book {config.totalPeriodsPerWeek} periods in total(in the whole week). You
-              can have at most {config.maxPeriodsPerDay} periods in a day. However, you have to
-              select at least {config.minDaysPerWeek} different days of the week.
+              You have to book <b>at least</b> {config.totalPeriodsPerWeek} periods (in the whole
+              week). You can have at most {config.maxPeriodsPerDay} periods in a day. However, you
+              have to select at least {config.minDaysPerWeek} different days of the week.
             </Text>
+            {periods.length < config.totalPeriodsPerWeek && (
+              <Text weight="bold" mb={10} color="purple">
+                Caution: You have to book at least {config.totalPeriodsPerWeek - periods.length}{' '}
+                more periods.
+              </Text>
+            )}
             <Grid align="center">
               <Grid.Col xl={12} span={12}>
                 <form onSubmit={searchRoomForm.onSubmit((values) => searchRoom(values))}>
