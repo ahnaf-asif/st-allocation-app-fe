@@ -89,9 +89,11 @@ export const Header = ({ burgerAction, smallDevice }: any) => {
 
           <Menu.Dropdown>
             <Menu.Label>User Menu</Menu.Label>
-            <Menu.Item icon={<IconEdit size={14} />} onClick={() => navigate('/st/periods')}>
-              Update Periods
-            </Menu.Item>
+            {auth.user && !auth.user?.isAdmin && (
+              <Menu.Item icon={<IconEdit size={14} />} onClick={() => navigate('/st/periods')}>
+                Update Periods
+              </Menu.Item>
+            )}
             <Menu.Item icon={<IconSettings size={14} />} onClick={changePasswordClicked}>
               Change Password
             </Menu.Item>
