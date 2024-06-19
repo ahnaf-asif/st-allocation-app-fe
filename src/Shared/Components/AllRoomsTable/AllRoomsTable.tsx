@@ -68,6 +68,33 @@ export const AllRoomsTable = ({ allRooms, getAllRooms }: { allRooms: any[]; getA
     setDeleteModal(true);
   };
 
+  const downloadRoutineByRoomID = async (room: any) => {
+    try {
+      const resp = await axios.get(`/admin/download-routine/${room.id}`);
+      const csvString = resp.data;
+
+      const blob = new Blob([csvString], { type: 'text/csv' });
+
+      // Create a temporary anchor element
+      const anchor = document.createElement('a');
+      anchor.href = URL.createObjectURL(blob);
+      anchor.download = `${room.name}.csv`;
+
+      document.body.appendChild(anchor);
+      anchor.click();
+
+      // Clean up
+      document.body.removeChild(anchor);
+      URL.revokeObjectURL(anchor.href);
+    } catch (e) {
+      notifications.show({
+        title: 'Error',
+        message: 'Error getting the csv of routine ',
+        color: 'red'
+      });
+    }
+  };
+
   const deleteRoom = async () => {
     try {
       const resp = await axios.delete(`/admin/rooms/delete/${itemToBeRemoved?.id}`);
@@ -112,12 +139,25 @@ export const AllRoomsTable = ({ allRooms, getAllRooms }: { allRooms: any[]; getA
             accessor: 'action',
             render: (room: any) => {
               return (
-                <Flex justify="flex-end" gap={20}>
+                <Flex justify="flex-start" gap={20}>
                   <Button onClick={() => updatedButtonClicked(room)} color="green">
                     Update Capacity
                   </Button>
                   <Button onClick={() => deleteButtonClicked(room)} color="red">
                     Delete
+                  </Button>
+                </Flex>
+              );
+            }
+          },
+          {
+            accessor: 'routine',
+            render: (room: any) => {
+              return (
+                <Flex justify="center">
+                  <Button onClick={() => downloadRoutineByRoomID(room)} color="gray">
+                    {' '}
+                    Download Routine{' '}
                   </Button>
                 </Flex>
               );
