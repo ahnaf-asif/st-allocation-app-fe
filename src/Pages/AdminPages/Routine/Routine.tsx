@@ -1,5 +1,5 @@
 import { Layout } from '@/Layouts';
-import { Box, Divider, Modal, Table, Text, Title } from '@mantine/core';
+import { Box, Button, Divider, Flex, Modal, Table, Text, Title } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { useAppSelector } from '@/Redux/hooks';
 import { notifications } from '@mantine/notifications';
@@ -12,6 +12,7 @@ export const AdminRoutine = () => {
   const [filteredSts, setFilteredSts] = useState([]);
   const [filteredStsTableTitle, setFilteredStsTableTitle] = useState('');
   const [filteredStsModal, setFilteredStsModal] = useState(false);
+  const [resetRoutineModal, setResetRoutineModal] = useState(false);
 
   const auth = useAppSelector((state) => state.auth);
 
@@ -59,13 +60,40 @@ export const AdminRoutine = () => {
     }
   };
 
+  const resetRoutine = async () => {
+    try {
+      const resp = await axios.post('/admin/reset-routine');
+      console.log(resp);
+      notifications.show({
+        title: 'Success!!!',
+        message: 'Successfully reset the routine',
+        color: 'green'
+      });
+    } catch (e) {
+      notifications.show({
+        title: 'Error!!!',
+        message: 'Unexpected Error Happened while resetting the routine',
+        color: 'red'
+      });
+    }
+  };
+
   return (
     <Layout admin>
       <Box>
-        <Title order={3}>ST Overall Routine</Title>
-        <Text my={10} size="sm" color="dimmed">
-          Here you can see the overall routine of Student Tutors
-        </Text>
+        <Flex justify="space-between">
+          <Box>
+            <Title order={3}>ST Overall Routine</Title>
+            <Text my={10} size="sm" color="dimmed">
+              Here you can see the overall routine of Student Tutors
+            </Text>
+          </Box>
+          <Box>
+            <Button color="red" onClick={() => setResetRoutineModal(true)}>
+              Reset Routine
+            </Button>
+          </Box>
+        </Flex>
         <Divider />
       </Box>
       <Box mt={30}>
@@ -258,6 +286,25 @@ export const AdminRoutine = () => {
             tableTitle={''}
             tableContent={filteredStsTableTitle}
           />
+        </Modal>
+
+        <Modal
+          centered
+          withCloseButton={false}
+          opened={resetRoutineModal}
+          onClose={() => setResetRoutineModal(false)}
+        >
+          <Box>
+            <Text>Are you sure you want to reset the routine? This action cannot be undone</Text>
+            <Flex justify="flex-end" mt={30} gap={10}>
+              <Button size="xs" color="red" onClick={() => resetRoutine()}>
+                Yes
+              </Button>
+              <Button size="xs" onClick={() => setResetRoutineModal(false)}>
+                No
+              </Button>
+            </Flex>
+          </Box>
         </Modal>
       </Box>
     </Layout>
