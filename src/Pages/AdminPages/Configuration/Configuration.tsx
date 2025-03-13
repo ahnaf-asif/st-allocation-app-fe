@@ -14,6 +14,7 @@ import { PeriodsConfig } from './PeriodsConfig';
 export const AdminConfiguration = () => {
   const [config, setConfig] = useState({
     updateRoutineDeadline: new Date(),
+    updateRoutineStartTime: new Date(),
     totalPeriodsPerWeek: 6,
     maxPeriodsPerDay: 3,
     minDaysPerWeek: 3
@@ -23,11 +24,15 @@ export const AdminConfiguration = () => {
   const getConfiguration = async () => {
     try {
       const { data } = await axios.get('/user/configuration');
+
       setConfig({
         maxPeriodsPerDay: data.maxPeriodsPerDay,
         totalPeriodsPerWeek: data.totalPeriodsPerWeek,
         minDaysPerWeek: data.minDaysPerWeek,
-        updateRoutineDeadline: new Date(data.updateRoutineDeadline)
+        updateRoutineDeadline: new Date(data.updateRoutineDeadline),
+        updateRoutineStartTime: data.updateRoutineStartTime
+          ? new Date(data.updateRoutineStartTime)
+          : new Date()
       });
     } catch (e) {
       notifications.show({
@@ -47,6 +52,7 @@ export const AdminConfiguration = () => {
   const configForm = useForm({
     initialValues: {
       updateRoutineDeadline: new Date(),
+      updateRoutineStartTime: new Date(),
       totalPeriodsPerWeek: 6,
       maxPeriodsPerDay: 3,
       minDaysPerWeek: 3
@@ -54,6 +60,7 @@ export const AdminConfiguration = () => {
 
     validate: {
       updateRoutineDeadline: isNotEmpty('enter a valid date'),
+      updateRoutineStartTime: isNotEmpty('enter a valid date'),
       totalPeriodsPerWeek: (periods: number) =>
         periods > 0 ? null : 'total periods per week must be at least 1',
       maxPeriodsPerDay: (periods: number) =>
@@ -68,7 +75,8 @@ export const AdminConfiguration = () => {
       maxPeriodsPerDay: config.maxPeriodsPerDay,
       totalPeriodsPerWeek: config.totalPeriodsPerWeek,
       minDaysPerWeek: config.minDaysPerWeek,
-      updateRoutineDeadline: new Date(config.updateRoutineDeadline)
+      updateRoutineDeadline: new Date(config.updateRoutineDeadline),
+      updateRoutineStartTime: new Date(config.updateRoutineStartTime)
     });
   }, [config]);
 
@@ -79,6 +87,7 @@ export const AdminConfiguration = () => {
         maxPeriodsPerDay: data.maxPeriodsPerDay,
         totalPeriodsPerWeek: data.totalPeriodsPerWeek,
         updateRoutineDeadline: new Date(data.updateRoutineDeadline),
+        updateRoutineStartTime: new Date(data.updateRoutineStartTime),
         minDaysPerWeek: data.minDaysPerWeek
       });
 
@@ -110,14 +119,22 @@ export const AdminConfiguration = () => {
           <form onSubmit={configForm.onSubmit((values) => updateDeadline(values))}>
             <StyledDateTimePicker
               valueFormat="DD MMM YYYY hh:mm A"
+              {...configForm.getInputProps('updateRoutineStartTime')}
+              label="Start time for ST routine update"
+            />
+
+            <StyledDateTimePicker
+              valueFormat="DD MMM YYYY hh:mm A"
               {...configForm.getInputProps('updateRoutineDeadline')}
               label="Deadline for ST routine update"
             />
+
             <NumberInput
               {...configForm.getInputProps('totalPeriodsPerWeek')}
               mt={10}
               label="Minimum Number of Sessions per week"
             />
+
             <NumberInput
               {...configForm.getInputProps('maxPeriodsPerDay')}
               mt={10}
