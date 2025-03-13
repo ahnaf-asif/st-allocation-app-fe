@@ -16,6 +16,7 @@ export const StPeriods = () => {
   const [availableRooms, setAvailableRooms] = useState([]);
   const [showRoomAvailability, setShowRoomAvailability] = useState(false);
   const [days, setDays] = useState([]);
+  const [updateRoutineStartTime, setUpdateRoutineStartTime] = useState<Date>(new Date());
   const [updateRoutineDeadline, setUpdateRoutineDeadline] = useState<Date>(new Date());
   const [config, setConfig] = useState<any>({});
 
@@ -27,6 +28,7 @@ export const StPeriods = () => {
     try {
       const { data } = await axios.get('/user/configuration');
       setUpdateRoutineDeadline(new Date(data.updateRoutineDeadline));
+      setUpdateRoutineStartTime(data.updateRoutineStartTime);
       setConfig(data);
     } catch (e) {
       notifications.show({
@@ -197,116 +199,131 @@ export const StPeriods = () => {
 
   return (
     <Layout user>
-      <Box mb={40}>
-        <Title order={3}>My Consultation Periods - {CURRENT_SEMESTER}</Title>
-        <Text size="sm" my={10} color="dimmed">
-          {updateRoutineDeadline
-            ? `Routine Update Deadline is ${dayjs(updateRoutineDeadline).format(
-                'DD MMM YYYY, hh:mm A'
-              )}. You will not be able to update your routine after that.`
-            : 'Deadline is not set Yet'}
-        </Text>
-      </Box>
-      <StyledBorderedBox>
-        {updateRoutineDeadline > new Date() ? (
-          <Box>
-            <Text color="dimmed" size="sm" mb={20}>
-              You have to book <b>at least</b> {config.totalPeriodsPerWeek} periods (in the whole
-              week). You can have at most {config.maxPeriodsPerDay} periods in a day. However, you
-              have to select at least {config.minDaysPerWeek} different days of the week.
+      {updateRoutineStartTime < new Date() ? (
+        <>
+          <Box mb={40}>
+            <Title order={3}>My Consultation Periods - {CURRENT_SEMESTER}</Title>
+            <Text size="sm" my={10} color="dimmed">
+              {updateRoutineDeadline
+                ? `Routine Update Deadline is ${dayjs(updateRoutineDeadline).format(
+                    'DD MMM YYYY, hh:mm A'
+                  )}. You will not be able to update your routine after that.`
+                : 'Deadline is not set Yet'}
             </Text>
-            {periods.length < config.totalPeriodsPerWeek && (
-              <Text weight="bold" mb={10} color="purple">
-                Caution: You have to book at least {config.totalPeriodsPerWeek - periods.length}{' '}
-                more periods.
-              </Text>
-            )}
-            <Grid align="center">
-              <Grid.Col xl={12} span={12}>
-                <form onSubmit={searchRoomForm.onSubmit((values) => searchRoom(values))}>
-                  <Grid align="flex-end">
-                    <Grid.Col lg={4} span={12}>
-                      <Select {...searchRoomForm.getInputProps('dayId')} data={days} label="Day" />
-                    </Grid.Col>
-                    <Grid.Col lg={4} span={12}>
-                      <Select
-                        {...searchRoomForm.getInputProps('scheduleId')}
-                        data={schedules}
-                        label="Time"
-                      />
-                    </Grid.Col>
-                    <Grid.Col lg={4} span={12}>
-                      <Button type="submit" fullWidth>
-                        Check Available Rooms
-                      </Button>
-                    </Grid.Col>
-                  </Grid>
-                </form>
-              </Grid.Col>
-            </Grid>
           </Box>
-        ) : (
-          <Text color="red">Routine Update Deadline is over already</Text>
-        )}
-      </StyledBorderedBox>
-
-      {showRoomAvailability && (
-        <Box>
-          {availableRooms.length === 0 ? (
-            <Box mt={30}>
-              <StyledBorderedBox>
-                <Text color="red">There is no room available at the selected time.</Text>
-              </StyledBorderedBox>
-            </Box>
-          ) : (
-            <Box mt={30}>
-              <Text weight="bold">
-                There are {availableRooms.length} Available rooms for the selected time:
-              </Text>
-              <Text size="sm" mt={5} color="dimmed">
-                While seats may appear to be available when you check room availability, it is
-                possible that by the time you book the period, someone else has already booked it,
-                leading to the cancellation of yours.
-              </Text>
-              <Box mt={30}>
-                {availableRooms.map((availableRoom: any, index: number) => (
-                  // @ts-ignore
-                  <StyledBorderedBox key={index}>
-                    <Grid align="center">
-                      <Grid.Col span={9}>
-                        <Text size={18}>
-                          {availableRoom.name}
-                          <Text size="sm" color="dimmed">
-                            {availableRoom.availableSeats} out of {availableRoom.capacity} seats
-                            available
-                          </Text>
-                        </Text>
-                      </Grid.Col>
-                      <Grid.Col span={3}>
-                        <Button
-                          onClick={() => bookPeriod(availableRoom.id)}
-                          color="green"
-                          fullWidth
-                        >
-                          Book Period
-                        </Button>
-                      </Grid.Col>
-                    </Grid>
-                  </StyledBorderedBox>
-                ))}
+          <StyledBorderedBox>
+            {updateRoutineDeadline > new Date() && updateRoutineStartTime <= new Date() ? (
+              <Box>
+                <Text color="dimmed" size="sm" mb={20}>
+                  You have to book <b>at least</b> {config.totalPeriodsPerWeek} periods (in the
+                  whole week). You can have at most {config.maxPeriodsPerDay} periods in a day.
+                  However, you have to select at least {config.minDaysPerWeek} different days of the
+                  week.
+                </Text>
+                {periods.length < config.totalPeriodsPerWeek && (
+                  <Text weight="bold" mb={10} color="purple">
+                    Caution: You have to book at least {config.totalPeriodsPerWeek - periods.length}{' '}
+                    more periods.
+                  </Text>
+                )}
+                <Grid align="center">
+                  <Grid.Col xl={12} span={12}>
+                    <form onSubmit={searchRoomForm.onSubmit((values) => searchRoom(values))}>
+                      <Grid align="flex-end">
+                        <Grid.Col lg={4} span={12}>
+                          <Select
+                            {...searchRoomForm.getInputProps('dayId')}
+                            data={days}
+                            label="Day"
+                          />
+                        </Grid.Col>
+                        <Grid.Col lg={4} span={12}>
+                          <Select
+                            {...searchRoomForm.getInputProps('scheduleId')}
+                            data={schedules}
+                            label="Time"
+                          />
+                        </Grid.Col>
+                        <Grid.Col lg={4} span={12}>
+                          <Button type="submit" fullWidth>
+                            Check Available Rooms
+                          </Button>
+                        </Grid.Col>
+                      </Grid>
+                    </form>
+                  </Grid.Col>
+                </Grid>
               </Box>
+            ) : (
+              <Text color="red">Routine Update Deadline is over already</Text>
+            )}
+          </StyledBorderedBox>
+
+          {showRoomAvailability && (
+            <Box>
+              {availableRooms.length === 0 ? (
+                <Box mt={30}>
+                  <StyledBorderedBox>
+                    <Text color="red">There is no room available at the selected time.</Text>
+                  </StyledBorderedBox>
+                </Box>
+              ) : (
+                <Box mt={30}>
+                  <Text weight="bold">
+                    There are {availableRooms.length} Available rooms for the selected time:
+                  </Text>
+                  <Text size="sm" mt={5} color="dimmed">
+                    While seats may appear to be available when you check room availability, it is
+                    possible that by the time you book the period, someone else has already booked
+                    it, leading to the cancellation of yours.
+                  </Text>
+                  <Box mt={30}>
+                    {availableRooms.map((availableRoom: any, index: number) => (
+                      // @ts-ignore
+                      <StyledBorderedBox key={index}>
+                        <Grid align="center">
+                          <Grid.Col span={9}>
+                            <Text size={18}>
+                              {availableRoom.name}
+                              <Text size="sm" color="dimmed">
+                                {availableRoom.availableSeats} out of {availableRoom.capacity} seats
+                                available
+                              </Text>
+                            </Text>
+                          </Grid.Col>
+                          <Grid.Col span={3}>
+                            <Button
+                              onClick={() => bookPeriod(availableRoom.id)}
+                              color="green"
+                              fullWidth
+                            >
+                              Book Period
+                            </Button>
+                          </Grid.Col>
+                        </Grid>
+                      </StyledBorderedBox>
+                    ))}
+                  </Box>
+                </Box>
+              )}
             </Box>
           )}
+
+          <Box mt={50}>
+            <StPeriodsTable
+              updateRoutineDeadline={updateRoutineDeadline}
+              periods={periods}
+              getPeriods={getPeriods}
+            />
+          </Box>
+        </>
+      ) : (
+        <Box>
+          <Text>Routine Update has not started yet.</Text>
+          You will be able to start updating your routine from{' '}
+          <strong>{dayjs(updateRoutineDeadline).format('DD MMMM YYYY, hh:mm A')}</strong>
         </Box>
       )}
-
-      <Box mt={50}>
-        <StPeriodsTable
-          updateRoutineDeadline={updateRoutineDeadline}
-          periods={periods}
-          getPeriods={getPeriods}
-        />
-      </Box>
     </Layout>
   );
 };
