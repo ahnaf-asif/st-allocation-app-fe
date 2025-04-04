@@ -321,7 +321,7 @@ export const StPeriods = () => {
         <Box>
           <Text>Routine Update has not started yet.</Text>
           You will be able to start updating your routine from{' '}
-          <strong>{dayjs(updateRoutineDeadline).format('DD MMMM YYYY, hh:mm A')}</strong>
+          <strong>{dayjs(updateRoutineStartTime).format('DD MMMM YYYY, hh:mm A')}</strong>
         </Box>
       )}
     </Layout>
