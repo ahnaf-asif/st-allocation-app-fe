@@ -28,7 +28,7 @@ export const StPeriods = () => {
     try {
       const { data } = await axios.get('/user/configuration');
       setUpdateRoutineDeadline(new Date(data.updateRoutineDeadline));
-      setUpdateRoutineStartTime(data.updateRoutineStartTime);
+      setUpdateRoutineStartTime(new Date(data.updateRoutineStartTime));
       setConfig(data);
     } catch (e) {
       notifications.show({
